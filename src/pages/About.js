@@ -180,6 +180,29 @@ function About() {
     </div>
 
 </section>
+
+
+
+
+<footer className="footer" style={{ marginBottom: '0'}}>
+  <div className="footer-content" style={{ backgroundColor: '#0e0f0d'}}>
+    <div style={{ textAlign: 'center', padding: '20px' }}>
+    <h1 style={{ color: '#DDAD18', fontFamily:"albert sans"}}>Our socials</h1> <br></br>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      gap: '50px',
+      marginTop: '20px'
+    }}>
+      <a href='https://www.instagram.com/olisticanailsalonandbodyspa/' target="_blank" rel="noopener noreferrer"><img src="/assets/ig.png" alt="Instagram" className="social-icon"/></a>
+      <a href='https://www.facebook.com/olisticaph' target="_blank" rel="noopener noreferrer"><img src="/assets/fb.png" alt="Facebook" className="social-icon"/></a>
+    </div>
+  </div>
+
+  </div>
+  
+  
+</footer>
     
   </div>
 

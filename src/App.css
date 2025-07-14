@@ -777,3 +777,12 @@ td {
 .booking-result {
   text-align: center;
 }
+
+
+.social-icon:hover {
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
