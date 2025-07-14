@@ -1,5 +1,5 @@
 
-
+/*
 const express = require("express");
 const cors = require("cors");
 
@@ -25,3 +25,28 @@ app.post("/api/book", async (req, res) => {
 });
 
 app.listen(5000, () => console.log("Server running on port 5000"));
+
+*/
+
+
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method not allowed" });
+  }
+
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyNXFWUHuabw7qMhlQ13DzfkPQqkYKLz06fovyzZt6x9Cr9bd1UB5Sj0LqOEstk3K9y/exec";
+
+  try {
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(req.body)
+    });
+
+    const result = await response.json();
+    res.status(200).json(result);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, error: error.message });
+  }
+}
