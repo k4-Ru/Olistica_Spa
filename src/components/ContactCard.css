@@ -116,53 +116,20 @@
   width: 180px;;
 }
 
-@media (width: 320px) {
+
+
+
+
+@media (max-width: 386px) {
+
+
+  .contact-card-front img {
+    height: 100px;
+    width: 100px;
+  }
   .O-logo {
     width: 100px;
     height: 100px;
-  }
-
-  .map {
-    width: 100px;
-    height: 100px;
-  }
-  .address{
-    padding: 5px;
-    width: 140px;
-    justify-self: right;
-
-  }
-  .contact-info p {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    font-size: 10px;
-    margin: 4px;
-  }
- 
-  .contact-email p {
-    padding: 5px;
-    font-size: 9px;
-  }
-
-  .address p {
-    font-size: 8px;
-    line-height: 0.8;
-  }
-
-
-}
-
-
-
-
-
-@media (width: 375px) {
-
-
-  
-  .O-logo {
-    width: 120px;
-    height: 120px;
   }
   
   .contact-info {
@@ -189,7 +156,7 @@
   }
   .contact-email p{
     line-height: 1;
-    font-size: 11px;
+    font-size: 10px;
   }
   p{
     font-size: 8px;
@@ -206,24 +173,6 @@
   }
 }
 
-@media (width: 425px) {
-  .O-logo {
-    width: 150px;
-    height: 150px;
-  }
-.contact-info {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    font-size: 10px;
-  }
-  .map {
-    width: 150px;
-    height: 150px;
-  }
-  .address {
-    width: 200px;
-  }
-}
 
 @media (max-width: 600px) {
   .contact-card {
