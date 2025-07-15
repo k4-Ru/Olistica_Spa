@@ -69,7 +69,13 @@ export default function ContactCard() {
 
 
     
-  <div className="contact-card-back" style={{backgroundImage: 'url("/assets/back2.png")'}}>
+  <div className="contact-card-back" style={{backgroundImage: 'url("/assets/back2.png")' , 
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    
+    backgroundRepeat: 'no-repeat',
+  }}>
     
 
     <div >
@@ -91,7 +97,7 @@ export default function ContactCard() {
       <div className="address">
         <p>Olistica Nail Salon & Body Spa</p>
         <p>Commercial Space B, </p>
-          <p>Aurora Suites</p>
+        <p>Aurora Suites</p>
         <p>& Pavilion Bldg, Labitan St.,</p>
         <p>Zambales, Philippines</p>
       </div>
