@@ -101,8 +101,7 @@ function About() {
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
+    
     backgroundRepeat: 'no-repeat',
     overflow: 'hidden'
 
