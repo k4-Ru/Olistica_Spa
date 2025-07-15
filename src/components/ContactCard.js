@@ -59,7 +59,8 @@ export default function ContactCard() {
         }}>
 
           <img
-            src="/assets/O.png" style={{width: '180px'}} className="O-logo" alt="logo"/>
+            src="/assets/O.png"  className="O-logo" alt="logo"/>
+
         </div>
 
 

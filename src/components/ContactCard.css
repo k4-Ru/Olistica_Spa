@@ -110,14 +110,24 @@
     padding:10px;
 }
 
+.O-logo {
+  width: 180px;;
+}
+
 
 
 
 
 @media (max-width: 386px) {
 
+
+  .contact-card-front img {
+    height: 100px;
+    width: 100px;
+  }
   .O-logo {
-    height: 50px;
+    width: 100px;
+    height: 100px;
   }
   
   .contact-info {
