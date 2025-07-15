@@ -54,11 +54,15 @@ li {
     text-align: center;
   text-decoration: none;
   color: #DDAD18;
+  border-radius: 30px;
+
   }
 
 .nav-page:hover {
   background-color: #222222 ;
-  height: auto;
+  padding: 0;
+  margin: 0;
+  border-radius: 30px;
 }
 
 
@@ -814,6 +818,82 @@ td {
   .modal-button {
     font-size: 18px;
   }
+
+  .booking-steps{
+    font-size: 16px;
+  }
+
+  .calendar {
+  grid-template-columns: repeat(7, 60px);  
+  }
+  .calendar-day {
+    font-size:24px;
+  }
+  .calendar-label {
+    font-size: 20px;
+  }
+  .image-box {
+    width: 60px;
+    height: 60px;
+  }
+  td {
+    padding: 0;
+    font-size: 20px;
+    height: 120px;
+  }
+
+
+  .info-form div {
+    width: 600px;
+  }
+
+  
+}
+
+@media (max-width: 386px) {
+   .calendar {
+  grid-template-columns: repeat(7, 50px);  
+  }
+  .calendar-day {
+    font-size: 15px;
+  }
+  .calendar-label {
+    font-size: 18px;
+  }
+
+
+
+
+
+  th {
+    font-size: 16px;
+  }
+  td {
+    font-size: 14px;
+    height: 70px;
+  }
+
+  .image-box {
+    width: 40px;
+    height: 40px;
+  }
+  .h2-fillout {
+    font-size: 24px;
+  }
+
+  .info-form div {
+    width: 200px;
+    font-size: 14px;
+  }
+  .info-form label {
+    font-size: 16px;
+  }
+  .info-form input  {
+    font-size: 14px;
+    height: 70px;
+  }
+
+
 }
 
 
@@ -829,3 +909,12 @@ td {
 .social-icon:hover {
   transform: scale(1.1);
 }
+
+@media (max-width:768px) {
+.about-content {
+    background-attachment: scroll;
+  }
+}
+
+
+

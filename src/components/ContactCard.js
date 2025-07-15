@@ -104,14 +104,15 @@ export default function ContactCard() {
       </div>
 
     <div className="contact-details">
-        <p><strong>Globe: </strong>+63 966 266 8972</p>
-        <p><strong>Smart: </strong>+63 949 888 8972</p>
+        <p style={{ marginBottom: '0px'}}><strong>Globe: </strong>+63 966 266 8972</p>
+        <p style={{ margin:' 0'}}><strong>Viber: </strong>+63 960 427 7057</p>
+        <p style={{ marginTop: '0px'}}><strong>Tel: </strong>047 611 2120</p>
     </div> <hr className="line"></hr>
 
 
     <div className="contact-email">
       <p><strong>Email: </strong></p>
-        <p>reservations.olisticaspa@gmail.com</p>
+        <p>holistic.olistica@gmail.com</p>
     </div>
 
   </div>

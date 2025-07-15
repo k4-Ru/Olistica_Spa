@@ -123,9 +123,8 @@
 @media (max-width: 386px) {
 
 
-  .contact-card-front img {
-    height: 100px;
-    width: 100px;
+  .contact-card{
+    justify-self: center;
   }
   .O-logo {
     width: 100px;

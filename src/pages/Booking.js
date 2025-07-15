@@ -165,7 +165,7 @@ setShowResultModal(true);
             </thead>
             <tbody>
               {services.map((s, index) => (
-                <tr
+                <tr 
                   key={index}
                   className={`service-row ${
                     selectedServices.includes(index)
@@ -184,7 +184,7 @@ setShowResultModal(true);
 
                 >
                   <td>
-                    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <div  className="row"style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                       <div className="image-box" style={{ backgroundImage: `url(${s.image})` }} />
                       <span>{s.name}</span>
                     </div>
@@ -201,7 +201,7 @@ setShowResultModal(true);
       {/* Form */}
       <section className="booking" style={{ padding: "0px", backgroundColor: "#171915" }}>
         <div>
-          <h2 style={{ color: "#DDAD18", padding: "20px", marginBottom: '0px' }}>Fill out needed Information</h2>
+          <h2 className="h2-fillout"style={{ color: "#DDAD18", padding: "20px", marginBottom: '0px' }}>Fill out needed Information</h2>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <form className="info-form">
   <div>
@@ -260,7 +260,7 @@ setShowResultModal(true);
 
             <button
   className="confirm-button"
-  style={{ marginTop: "20px" }}
+  style={{ marginTop: "20px", marginBottom: "20px" }}
   onClick={() => {
     const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
     const contactPattern = /^\d{11}$/;
