@@ -813,6 +813,10 @@ td {
   transition: background-color 0.2s ease;
 }
 @media (max-width: 768px) {
+
+  .booking {
+    overflow-x: hidden;
+  }
   .booking-container {
      flex-direction: column;
     align-items: center; 
@@ -856,9 +860,21 @@ td {
 }
 
 @media (max-width: 386px) {
+  .booking {
+    overflow-x: hidden;
+    padding: 20px 0 20px 0;
+  }
+  .booking h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+  .booking-steps {
+    font-size: 12px;
+  }
   .booking-container {
     align-items: center; 
     justify-content: center;
+    flex-wrap: nowrap;
 
   }
    .calendar {
@@ -875,13 +891,17 @@ td {
     font-size: 24px;
     height: 64px;
   }
+  .time-slots-scroll{
+    scrollbar-width: 2px;
+  }
+  
 
 
 
 
 
   th {
-    font-size: 16px;
+    font-size: 13px;
   }
   td {
     font-size: 14px;
@@ -896,18 +916,26 @@ td {
     font-size: 24px;
   }
 
+
+
+
   .info-form div {
-    width: 200px;
+    width: 260px;
     font-size: 14px;
+    
   }
   .info-form label {
     font-size: 16px;
   }
   .info-form input  {
     font-size: 14px;
-    height: 70px;
-  }
+    height: 40px;
+    border-radius: 10px;
+    padding-right: 0;
 
+  }
+ 
+ 
 
 }
 

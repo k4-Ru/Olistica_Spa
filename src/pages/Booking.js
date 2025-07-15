@@ -202,9 +202,9 @@ setShowResultModal(true);
       <section className="booking" style={{ padding: "0px", backgroundColor: "#171915" }}>
         <div>
           <h2 className="h2-fillout"style={{ color: "#DDAD18", padding: "20px", marginBottom: '0px' }}>Fill out needed Information</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div className="fields"style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <form className="info-form">
-  <div>
+  <div className="inputs">
     <label htmlFor="name">Name</label>
     <input
       type="text"
