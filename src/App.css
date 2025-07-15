@@ -397,6 +397,7 @@ h2 {
   font-weight:500;
 }
 .booking {
+  justify-content: center;
   width: 100%;
   background-color: #faf3e6;
   padding: 20px;
@@ -812,6 +813,10 @@ td {
   transition: background-color 0.2s ease;
 }
 @media (max-width: 768px) {
+  .booking-container {
+     flex-direction: column;
+    align-items: center; 
+  }
   .modal-content p {
     font-size: 20px;
   }
@@ -851,14 +856,24 @@ td {
 }
 
 @media (max-width: 386px) {
+  .booking-container {
+    align-items: center; 
+    justify-content: center;
+
+  }
    .calendar {
-  grid-template-columns: repeat(7, 50px);  
+  grid-template-columns: repeat(7, 45px);  
   }
   .calendar-day {
-    font-size: 15px;
+    font-size: 14px;
   }
   .calendar-label {
-    font-size: 18px;
+    font-size: 17px;
+  }
+
+  .time-slot {
+    font-size: 24px;
+    height: 64px;
   }
 
 
