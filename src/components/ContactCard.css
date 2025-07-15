@@ -122,6 +122,30 @@
     padding:10px;
 }
 
+@media (max-width: 386px) {
+  .O-logo {
+    height: 50px;
+  }
+  .contact-card {
+    height: 100%;
+    width: 100vw;
+    max-width: 320px;
+    aspect-ratio: 16 / 9;
+
+  }
+  .contact-info {
+    overflow-y: hidden;
+    font-size: 8px;
+  }
+  body {
+    font-size: 8px;
+  }
+  .map{
+    width: 100px;
+    height: 100px;
+  }
+}
+
 @media (max-width: 600px) {
   .contact-card {
     height: 100%;

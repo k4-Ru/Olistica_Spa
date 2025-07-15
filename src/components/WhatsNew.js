@@ -49,7 +49,7 @@ export default function WhatsNew() {
   return (
     <section className='whats-new' style={{ borderRadius: '15px'}}>
       <div style={{ maxWidth: '100%', padding: '20px', borderRadius: '18px',
-        backgroundColor: "rgba(70, 70, 70, 0.3)",
+        backgroundColor: "rgba(70, 70, 70, 0.7)",
   backdropFilter: "blur(6px)",
   WebkitBackdropFilter: "blur(8px)"
        }}>

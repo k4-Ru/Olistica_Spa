@@ -328,12 +328,15 @@ section{
     align-items: center;
     padding: 15px;
   }
-  ul{
-    padding: 20px;
+  .nav-page{
+    font-size: 18px;
+  }
+  ul {
+    padding: 0 0 0 20px;
   }
   li {
-    font-size: 18px;
-    
+    padding: 12px;
+
   }
   .about-image {
     display: none;

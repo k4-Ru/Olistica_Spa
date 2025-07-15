@@ -72,8 +72,8 @@ export default function ContactCard() {
   <div className="contact-card-back" style={{backgroundImage: 'url("/assets/back2.png")'}}>
     
 
-    <div className="map">
-  <div style={{ position:'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', border: '3px solid #9D7B1D'}}>
+    <div >
+  <div className="map" style={{ position:'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', border: '3px solid #9D7B1D'}}>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1299.7233047980765!2d120.27711400587937!3d14.820564742000862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396716cd1803083%3A0x7ac907fbb4babdd1!2sOlistica%20Nail%20Salon%20%26%20Body%20Spa!5e0!3m2!1sen!2sph!4v1751609536657!5m2!1sen!2sph"
       width="200"
