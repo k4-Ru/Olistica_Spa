@@ -45,17 +45,20 @@ export default function WhatsNew() {
     : '';
 
   // Determine if we're on the latest post (index 0)
-  const isLatest = currentIndex === 0;
 
   return (
-    <section style={{ padding: '20px' }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        <h2 className="book-title" style={{ textAlign: 'center', marginBottom: '10px' }}>
+    <section className='whats-new' style={{ borderRadius: '15px'}}>
+      <div style={{ maxWidth: '100%', padding: '20px', borderRadius: '18px',
+        backgroundColor: "rgba(70, 70, 70, 0.3)",
+  backdropFilter: "blur(6px)",
+  WebkitBackdropFilter: "blur(8px)"
+       }}>
+        <h2 className="book-title" style={{ textAlign: 'center', textShadow: '0 0 0 #000'}}>
           What's New?
         </h2>
 
         {/* Date */}
-        <small style={{ display: 'block', color: '#777', marginBottom: '10px', textAlign: 'center' }}>
+        <small style={{ display: 'block', color: '#faf3e6', marginBottom: '10px', textAlign: 'center', fontFamily: 'albert sans' }}>
           {formattedDate}
         </small>
 
@@ -73,7 +76,7 @@ export default function WhatsNew() {
           {/* Media */}
           <div style={{
             flex: '1 1 250px',
-            maxWidth: isLatest ? '500px' : '300px' // larger when latest
+            maxWidth:'500px' // larger when latest
           }}>
             {imagesvideos.length > 0 ? (
               imagesvideos.map((asset, index) => {
@@ -86,7 +89,7 @@ export default function WhatsNew() {
                   return (
                     <img
                       key={index}
-                      src={`${url}?w=${isLatest ? 500 : 300}&fit=thumb&fm=webp&q=80`}
+                      src={`${url}?w=${600}&fit=thumb&fm=webp&q=80`}
                       alt={title}
                       style={{
                         width: '100%',
@@ -103,7 +106,8 @@ export default function WhatsNew() {
                       style={{
                         width: '100%',
                         borderRadius: '8px',
-                        marginBottom: '8px'
+                        marginBottom: '8px',
+                        height: ''
                       }}
                     >
                       <source src={url} type={contentType} />
@@ -122,14 +126,16 @@ export default function WhatsNew() {
           {/* Title & description */}
           <div style={{ flex: '2 1 300px' }}>
             <p style={{
+              color: '#faf3e6',
               fontWeight: 'bold',
               marginBottom: '8px',
-              fontSize: isLatest ? '1.3rem' : '1.1rem'
+              fontSize:'1.3rem',
+              fontFamily: 'albert sans'
             }}>
               {title}
             </p> <hr></hr>
             {description && (
-              <p style={{ fontSize: '0.95rem', color: '#555' }}>
+              <p style={{ fontSize: '0.95rem', color: '#faf3e6', fontFamily: 'albert sans' }}>
                 {description}
               </p>
             )}
@@ -137,7 +143,7 @@ export default function WhatsNew() {
         </div>
 
         {/* Navigation buttons */}
-        <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+        <div className='post-button'style={{ display: 'flex', gap: '10px', justifyContent: 'center', fontFamily: 'albert sans' }}>
           <button
             onClick={handlePrevious}
             disabled={currentIndex === posts.length - 1}
@@ -148,7 +154,7 @@ export default function WhatsNew() {
           >
             Previous
           </button>
-          <button
+          <button className='post-button'
             onClick={handleNext}
             disabled={currentIndex === 0}
             style={{

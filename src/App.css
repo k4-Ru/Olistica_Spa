@@ -12,6 +12,13 @@ body {
   
 }
 
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo-small {
   display: none;
 }
@@ -60,98 +67,62 @@ li {
  
 
 
-.about-content {
+
+
+.about-header {
   display: flex;
-  justify-content: space-between;
-  margin:0;
-}
-
-.about-description {
-
-
-
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(8px); 
-  padding: 20px;
-  border-radius: 20px;
-
-  margin: 20px;
-
-  
-  position: relative;
   justify-content: center;
-    font-family: "albert sans", sans-serif;
-    color: #FFF8EB;
-    font-size: 22px;
-    line-height: 2.0;
-    font-weight: 200;
-  padding-right: 30px;
-    opacity: 0;
-  transform: translateX(-30px);
-  animation: fadeInLeft 1s ease-out forwards;
+  gap : 40px;
+  align-items: center;
+  padding :20px;
 }
 
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.about-texts {
+  color:#faf3e6;
+  font-family: 'windsong', sans-serif;
+  font-weight: 400;
+  line-height: 0.9;
+}
+.about-texts h1 {
+  font-weight: 400;
+  font-size: 110px;
+  margin-bottom: -35px;
 }
 
+.about-texts h2 {
+  font-family: 'albert sans', sans-serif;
 
-
-.about-description p {
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: fadeInLeft 1s ease-out forwards;
+  font-size: 43px;
+  font-weight: 400;
   margin: 0;
 }
 
-.about-description p:nth-child(1) {
-  animation-delay: 0s;
+.about-texts p {
+  text-align: right;
+  font-family: 'albert sans', sans-serif;
 }
 
-.about-description p:nth-child(2) {
-  animation-delay: 0.5s;
-}
 
-.about-description p:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.about-description p:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.about-description p:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    align-items: center; 
+    
+  }
+  .about-texts h1 {
+    font-size: 60px;
+    margin-bottom: -20px;
+  }
+  .about-texts h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .about-texts p {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 0;
   }
 }
-
-
-
-.animated-arrow {
-  display: inline-block;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-
 
 .contact {
   position: relative;
@@ -163,18 +134,65 @@ section{
 
 
 
+.whats-new {
+ margin: 80px; 
+}
 
-.card {
-  padding: 20px;
-  border-radius: 30px;
-  background-color: #CCC6B3;     
+@media (max-width: 768px){
+  .whats-new {
+    margin: 0;
+   
+  }
+  
 }
 
 
 
+
+
+
+
+.post-button button{
+  color: #171915;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .book-title{
-  padding:40px;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 40px;
   font-family: "Albert Sans", sans-serif;
   color: #DDAD18;
@@ -304,14 +322,17 @@ section{
   .logo-full{
     display: none;
   }
-  .logo-small {
+  .logo-small{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 15px;
+  }
+  ul{
+    padding: 20px;
   }
   li {
-    font-size: 22px;
+    font-size: 18px;
     
   }
   .about-image {
@@ -336,12 +357,31 @@ section{
   }
 }
 
-@media  (max-width: 1440px) {
-  .about-description {
-    font-size: 18px; 
-  }
-  
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Booking page*/

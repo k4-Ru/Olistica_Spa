@@ -108,44 +108,38 @@ function About() {
 
   }}
 >
-    <div className="about-image">
-      <img src="/assets/model.png"  alt='model'/> 
-    </div>
-    <div >
-      <div className="about-description">
-  <p>
-    Welcome to Olistica Nail Salon and Body Spa, your sanctuary for relaxation, beauty, and self-care.
-    We offer a luxurious range of nail services, rejuvenating body treatments, and holistic spa experiences
-    designed to refresh your mind, body, and spirit.
-    Discover the art of wellness and indulge in the ultimate escape at Olistica.
-    Contact us <span className="animated-arrow">🡫</span>
-  </p>
-</div>
 
+  <div classname="about-content">
 
+    
+    <div className="about-header" >
+      <div className='about-texts'>
+      <h1> Welcome to</h1>
+      <h2 className="about-title">Olistica Nail Salon & Body Spa</h2>
+      <p className="about-subtitle">Your sanctuary for relaxation, beauty, and self-care.</p>
+      
+
+      </div>
 
       <div className="contact">
         <ContactCard  />
       </div>
       
-      
     </div>
+</div>
 
-
-
-
+<section className='whats-new' style={{ margin: '0'}}>
+  <WhatsNew /> 
+</section>
 
   </div>
 
-
-
 </section>
 
 
-<div className="line" style={{ border:'none'}}></div>
-<section className="posting">
-  <WhatsNew /> 
-</section>
+
+
+
 
 
 
@@ -187,12 +181,11 @@ function About() {
 <footer className="footer" style={{ marginBottom: '0'}}>
   <div className="footer-content" style={{ backgroundColor: '#0e0f0d'}}>
     <div style={{ textAlign: 'center', padding: '20px' }}>
-    <h1 style={{ color: '#DDAD18', fontFamily:"albert sans"}}>Our socials</h1> <br></br>
+    <h1 style={{ color: '#DDAD18', fontFamily:"albert sans", fontWeight:'400'}}>Our socials</h1> <br></br>
     <div style={{
       display: 'flex',
       justifyContent: 'center',
-      gap: '50px',
-      marginTop: '20px'
+      gap: '50px'
     }}>
       <a href='https://www.instagram.com/olisticanailsalonandbodyspa/' target="_blank" rel="noopener noreferrer"><img src="/assets/ig.png" alt="Instagram" className="social-icon"/></a>
       <a href='https://www.facebook.com/olisticaph' target="_blank" rel="noopener noreferrer"><img src="/assets/fb.png" alt="Facebook" className="social-icon"/></a>

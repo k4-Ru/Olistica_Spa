@@ -15,7 +15,7 @@ function AppContent() {
   return (
     <div className="App">
       <header>
-        <div>
+        <div className='logo-div'>
           <img src="../assets/spa_logo.png" alt="Logo" className='logo-full' />
           <img src="../assets/O-small.png" alt="logo" className='logo-small' />
         </div>
