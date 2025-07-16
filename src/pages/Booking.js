@@ -263,22 +263,24 @@ setShowResultModal(true);
   <div>
     <label htmlFor="contact">Contact Number</label>
     <input
-      type="tel"
-      id="contact"
-      placeholder="09XXXXXXXXX"
-      value={form.contact}
-      onChange={(e) => {
-        const value = e.target.value;
-        // Allow only numbers, and max length 11
-        if (/^\d*$/.test(value) && value.length <= 11) {
-          setForm(prev => ({ ...prev, contact: value }));
-        }
-      }}
-      required
-      minLength={11}
-      maxLength={11}
-      title="Contact number must be exactly 11 digits"
-    />
+  type="tel"
+  id="contact"
+  placeholder="09XXXXXXXXX"
+  value={form.contact}
+  onChange={(e) => {
+    const value = e.target.value;
+    // Allow only numbers, must start with '09', and max length 11
+    if (/^\d*$/.test(value) && value.length <= 11) {
+      setForm(prev => ({ ...prev, contact: value }));
+    }
+  }}
+  required
+  minLength={11}
+  maxLength={11}
+  pattern="09\d{9}"
+  title="Contact number must be exactly 11 digits and start with '09'"
+/>
+
   </div>
 </form>
 
