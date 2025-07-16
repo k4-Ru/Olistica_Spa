@@ -120,30 +120,24 @@ function About() {
 <section style={{ position: 'relative' }}>  
 
 
-  <div className="services"> 
-
-<div className='line' style={{height:' 15px', border:'none'}}></div>
-
-      <h1 className="book-title">OUR SERVICES</h1>
-      <div className="scroll-services" ref={scrollRef}>
-        {extendedServices.map((service, i) => (
-          <div
-            key={i}
-            className={`service-card ${i === currentIndex + 1 ? 'active' : ''}`}
-          >
-            <img src={service.image} alt={`Service ${i}`} className="ellipse-img" />
-            {i === currentIndex + 1 && (
-              <> 
-              <h1 className='service-name'>{service.name}</h1>
-              <p className='service-time'><span>·</span> {service.time}</p>
-              <p className="description">{service.description}</p>
-              </>
-             
-            )}
-          </div>
-        ))}
-      </div>
+ <div className="scroll-services" ref={scrollRef}>
+  {services.map((service, i) => (
+    <div
+      key={i}
+      className={`service-card ${i === currentIndex ? 'active' : ''}`}
+    >
+      <img src={service.image} alt={`Service ${i}`} className="ellipse-img" />
+      {i === currentIndex && (
+        <>
+          <h1 className='service-name'>{service.name}</h1>
+          <p className='service-time'><span>·</span> {service.time}</p>
+          <p className="description">{service.description}</p>
+        </>
+      )}
     </div>
+  ))}
+</div>
+
 
 </section>
 
