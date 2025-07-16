@@ -15,76 +15,49 @@ function About() {
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
   const updateCurrentIndex = () => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+  const scrollContainer = scrollRef.current;
+  if (!scrollContainer) return;
 
-    const scrollLeft = scrollContainer.scrollLeft;
-    const cards = scrollContainer.querySelectorAll('.service-card');
-    const containerCenter = scrollLeft + scrollContainer.offsetWidth / 2;
+  const scrollLeft = scrollContainer.scrollLeft;
+  const cards = scrollContainer.querySelectorAll('.service-card');
+  const containerCenter = scrollLeft + scrollContainer.offsetWidth / 2;
 
-    let closestIndex = 0;
-    let minDistance = Infinity;
+  let closestIndex = 0;
+  let minDistance = Infinity;
 
-    cards.forEach((card, index) => {
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const distance = Math.abs(containerCenter - cardCenter);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestIndex = index;
-      }
-    });
+  cards.forEach((card, index) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const distance = Math.abs(containerCenter - cardCenter);
+    if (distance < minDistance) {
+      minDistance = distance;
+      closestIndex = index;
+    }
+  });
 
-    setCurrentIndex(closestIndex - 1);
-  };
+  setCurrentIndex(closestIndex);
+};
+
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+  const scrollContainer = scrollRef.current;
+  if (!scrollContainer) return;
 
-    let isScrolling;
-
-    const onScroll = () => {
-      updateCurrentIndex();
-
-      clearTimeout(isScrolling);
-
-      isScrolling = setTimeout(() => {
-        const scrollLeft = scrollContainer.scrollLeft;
-        const cards = scrollContainer.querySelectorAll('.service-card');
-
-        const firstClone = cards[0];
-        const lastClone = cards[cards.length - 1];
-        const firstReal = cards[1];
-        const lastReal = cards[cards.length - 2];
-
-        if (scrollLeft <= firstClone.offsetLeft - scrollContainer.offsetWidth / 2 + firstClone.offsetWidth / 2) {
-          scrollContainer.scrollLeft =
-            lastReal.offsetLeft - scrollContainer.offsetWidth / 2 + lastReal.offsetWidth / 2;
-        }
-
-        else if (scrollLeft >= lastClone.offsetLeft - scrollContainer.offsetWidth / 2 + lastClone.offsetWidth / 2) {
-          scrollContainer.scrollLeft =
-            firstReal.offsetLeft - scrollContainer.offsetWidth / 2 + firstReal.offsetWidth / 2;
-        }
-      }, 40);
-    };
-
-    scrollContainer.addEventListener('scroll', onScroll);
-
-    const firstRealCard = scrollContainer.querySelectorAll('.service-card')[1];
-    if (firstRealCard) {
-      scrollContainer.scrollLeft =
-        firstRealCard.offsetLeft - scrollContainer.offsetWidth / 2 + firstRealCard.offsetWidth / 2;
-    }
-
+  const onScroll = () => {
     updateCurrentIndex();
+  };
 
-    return () => {
-      scrollContainer.removeEventListener('scroll', onScroll);
-      clearTimeout(isScrolling);
-    };
-  }, []);
+  scrollContainer.addEventListener('scroll', onScroll);
+
+  // initial update
+  updateCurrentIndex();
+
+  return () => {
+    scrollContainer.removeEventListener('scroll', onScroll);
+  };
+}, []);
+
 
   return (
 

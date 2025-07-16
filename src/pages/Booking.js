@@ -387,7 +387,7 @@ setShowResultModal(true);
             
             <div className="modal-buttons-wrap" style={{ marginTop: "20px" }}>
               <button className="modal-button confirm" onClick={handleConfirmBooking} disabled={isLoading}> {isLoading ? "Loading..." : "Confirm"} </button>
-              <button className="modal-button cancel"  onClick={() => setShowModal(false)}>Cancel</button>
+              <button className="modal-button cancel"  onClick={() => setShowModal(false)} disabled={isLoading}>Cancel</button>
             </div>
           </div>
         </div>
