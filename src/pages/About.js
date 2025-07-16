@@ -6,11 +6,7 @@ import WhatsNew from '../components/WhatsNew';
 import ContactCard from '../components/ContactCard';
 
 function About() {
-  const extendedServices = [
-    services[services.length - 1],
-    ...services,
-    services[0],
-  ];
+ 
 
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
