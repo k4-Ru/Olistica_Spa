@@ -59,6 +59,8 @@ function About() {
 }, []);
 
 
+
+
   return (
 
   <div>
@@ -119,8 +121,15 @@ function About() {
 
 <section style={{ position: 'relative' }}>  
 
+  <div className='services'>
 
- <div className="scroll-services" ref={scrollRef}>
+  <div className='line' style={{height:' 15px', border:'none'}}></div>
+
+      <h1 className="book-title">OUR SERVICES</h1>
+
+
+<div className="scroll-services" ref={scrollRef}>
+  <div className="spacer"></div>
   {services.map((service, i) => (
     <div
       key={i}
@@ -136,7 +145,13 @@ function About() {
       )}
     </div>
   ))}
+  <div className="spacer"></div>
 </div>
+
+
+
+     </div>
+
 
 
 </section>
