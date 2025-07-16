@@ -5,6 +5,10 @@ import services from '../services.json';
 
 function Booking() {
 
+  //loading state
+  const [isLoading, setIsLoading] = useState(false);
+
+
   //for modals
   const [showResultModal, setShowResultModal] = useState(false);
   const [bookingResult, setBookingResult] = useState([]);
@@ -24,12 +28,26 @@ function Booking() {
   }
 
   // for time slots
-  const timeSlots = ["9:30 AM"];
-  for (let hour = 9; hour <= 22; hour++) {
-    timeSlots.push(`${hour % 12 === 0 ? 12 : hour % 12}:00 ${hour < 12 ? "AM" : "PM"}`);
-    timeSlots.push(`${hour % 12 === 0 ? 12 : hour % 12}:30 ${hour < 12 ? "AM" : "PM"}`);
-  }
-  timeSlots.push("10:30 PM");
+  const timeSlots = [];
+
+let start = new Date();
+start.setHours(9, 30, 0, 0); // 9:30 AM
+
+let end = new Date();
+end.setHours(22, 30, 0, 0); // 10:30 PM
+
+while (start <= end) {
+  const hour = start.getHours();
+  const minutes = start.getMinutes();
+  const ampm = hour < 12 ? "AM" : "PM";
+  const hour12 = hour % 12 === 0 ? 12 : hour % 12;
+  const minutesStr = minutes === 0 ? "00" : "30";
+  timeSlots.push(`${hour12}:${minutesStr} ${ampm}`);
+  start.setMinutes(start.getMinutes() + 30);
+}
+
+
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -64,6 +82,10 @@ function Booking() {
     return;
   }
 
+   if (isLoading) return;
+
+  setIsLoading(true); 
+
   const dataToSend = {
     ...form,
     time: timeSlots[selectedSlot],
@@ -89,9 +111,12 @@ function Booking() {
 } catch (error) {
   console.error(error);
   setBookingResult("error");
-}
-setShowModal(false);
+} finally {
+  setIsLoading (false);
+  setShowModal(false);
 setShowResultModal(true);
+
+}
 
   };
 
@@ -361,7 +386,7 @@ setShowResultModal(true);
 
             
             <div className="modal-buttons-wrap" style={{ marginTop: "20px" }}>
-              <button className="modal-button confirm" onClick={handleConfirmBooking}>Confirm</button>
+              <button className="modal-button confirm" onClick={handleConfirmBooking} disabled={isLoading}> {isLoading ? "Loading..." : "Confirm"} </button>
               <button className="modal-button cancel"  onClick={() => setShowModal(false)}>Cancel</button>
             </div>
           </div>
