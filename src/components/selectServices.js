@@ -1,11 +1,12 @@
 
 // ServiceSelector.jsx
+
 import React, { useEffect, useMemo, useState } from "react";
 import servicesData from "../services/categories_with_services.json";
 
 // ---- tiny styles (inline, no CSS framework) ----
 const S = {
-  page: { maxWidth: 1600, margin: "10px auto", padding: "0 16px", fontFamily: "albert sans, sans-serif" },
+  page: { maxWidth: 1600, margin: "10px auto", padding: "0 16px", fontFamily: "Albert sans, sans-serif" },
   // row: { display: "grid", gridTemplateColumns: "2fr 1fr", gap: 16 },
 
   row: { 
@@ -153,8 +154,10 @@ function toggleAddon(addon, catId) {
 
 
     <div style={{width: "100%",}}>
+
       
       <div style={{ marginBottom: 24,}}>
+     
         <a href="/OlisticaMenu.pdf" download="Olistica-Service-Menu.pdf">
         <button style={S.btnPrimary }>Take a look at our Menu</button>
       </a>

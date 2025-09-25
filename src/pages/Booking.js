@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import dayjs from "dayjs";
 import ServiceSelector from "../components/selectServices";
+import { color } from "framer-motion";
 
 function Booking() {
 
@@ -374,11 +375,12 @@ const handleConfirmBooking = async () => {
 
 
       {/* Modal */}
-      {/* Modal */}
+  
 {showModal && (
   <div className="modal-overlay">
     <div className="modal-content">
-      <h2>Booking Summary</h2>
+      <h2 style={{ marginBottom: "0"}}>Booking Summary</h2>
+      <p style={{ color: "#bbbbbb", fontSize: "15px"}}>*Do save a screenshot*</p>
       <hr />
 
       {/* Customer Info */}
