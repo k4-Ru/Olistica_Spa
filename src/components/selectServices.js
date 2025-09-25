@@ -95,19 +95,22 @@ export function ServiceSelector({ data, currency = "₱", onChange }) {
 
     data.forEach((cat) => {
       (cat.services || []).forEach((svc) => {
-        if (selectedServices[svc.id]) {
-          const addonsMap = selectedAddons[String(cat.id)] || {};
-          const chosenAddons = (cat.addons || []).filter((a) => addonsMap[a.id]);
-          const svcPrice = Number(svc.price) || 0;
-          const addTotal = chosenAddons.reduce((sum, a) => sum + (Number(a.addon_price) || 0), 0);
-          subtotal += svcPrice + addTotal;
-          items.push({
-            categoryId: cat.id,
-            categoryName: cat.category,
-            service: svc,
-            addons: chosenAddons,
-          });
-        }
+        if (selectedServices[svc.id || svc.name]) {
+  const addonsMap = selectedAddons[String(cat.id)] || {};
+  const chosenAddons = (cat.addons || []).filter(
+    (a) => addonsMap[a.id || a.addon_name]
+  );
+  const svcPrice = Number(svc.price) || 0;
+  const addTotal = chosenAddons.reduce((sum, a) => sum + (Number(a.addon_price) || 0), 0);
+  subtotal += svcPrice + addTotal;
+  items.push({
+    categoryId: cat.id,
+    categoryName: cat.category,
+    service: svc,
+    addons: chosenAddons,
+  });
+}
+
       });
     });
 
@@ -119,16 +122,23 @@ export function ServiceSelector({ data, currency = "₱", onChange }) {
   }, [selection, onChange]);
 
   function toggleService(svc, catId) {
-    setSelectedServices((prev) => ({ ...prev, [svc.id]: !prev[svc.id] }));
-  }
+  const key = svc.id || svc.name; // fallback if no id
+  setSelectedServices((prev) => ({ ...prev, [key]: !prev[key] }));
+}
 
-  function toggleAddon(addon, catId) {
-    setSelectedAddons((prev) => {
-      const cid = String(catId);
-      const bucket = prev[cid] || {};
-      return { ...prev, [cid]: { ...bucket, [addon.id]: !bucket[addon.id] } };
-    });
-  }
+function toggleAddon(addon, catId) {
+  const cid = String(catId);
+  const key = addon.id || addon.addon_name;
+
+  setSelectedAddons((prev) => {
+    const bucket = prev[cid] || {};
+    return {
+      ...prev,
+      [cid]: { ...bucket, [key]: !bucket[key] },
+    };
+  });
+}
+
 
   function clearAll() {
     setSelectedServices({});

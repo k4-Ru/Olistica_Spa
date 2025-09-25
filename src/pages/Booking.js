@@ -70,8 +70,11 @@ while (start <= end) {
 
 
 
+const handleConfirmBooking = async () => {
+  console.log("🔍 Form data:", form);
+  console.log("🔍 Selected slot:", selectedSlot, "Time:", timeSlots[selectedSlot]);
+  console.log("🔍 Cart selection:", cartSelection);
 
- const handleConfirmBooking = async () => {
   if (
     !form.name ||
     !form.email ||
@@ -80,6 +83,13 @@ while (start <= end) {
     selectedSlot === null ||
     cartSelection.items.length === 0
   ) {
+    if (!form.name) console.warn("⚠️ Missing: Name");
+    if (!form.email) console.warn("⚠️ Missing: Email");
+    if (!form.contact) console.warn("⚠️ Missing: Contact");
+    if (!form.date) console.warn("⚠️ Missing: Date");
+    if (selectedSlot === null) console.warn("⚠️ Missing: Time slot");
+    if (cartSelection.items.length === 0) console.warn("⚠️ Missing: Services");
+
     alert("Please fill out all fields.");
     return;
   }
@@ -91,10 +101,10 @@ while (start <= end) {
     ...form,
     date: form.date,
     time: timeSlots[selectedSlot],
-    services: cartSelection.items.map(item => ({
-      service: item.service.name,
+    service: cartSelection.items.map((item) => ({
+      name: item.service.name,
       price: item.service.price,
-      addons: item.addons.map(a => ({
+      addons: item.addons.map((a) => ({
         name: a.addon_name,
         price: a.addon_price,
       })),
@@ -102,6 +112,8 @@ while (start <= end) {
     subtotal: cartSelection.subtotal,
     currency: cartSelection.currency,
   };
+
+  console.log("✅ Final bookingData payload:", bookingData);
 
   try {
     const response = await fetch("/api/server", {
@@ -111,13 +123,15 @@ while (start <= end) {
     });
 
     const result = await response.json();
+    console.log("📩 Server response:", result);
+
     if (result?.success) {
       setBookingResult("success");
     } else {
       setBookingResult("error");
     }
   } catch (error) {
-    console.error(error);
+    console.error("❌ Fetch error:", error);
     setBookingResult("error");
   } finally {
     setIsLoading(false);
@@ -125,6 +139,7 @@ while (start <= end) {
     setShowResultModal(true);
   }
 };
+
 
 
   return (
