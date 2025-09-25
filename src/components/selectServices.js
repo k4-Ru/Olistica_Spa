@@ -304,9 +304,7 @@ function toggleAddon(addon, catId) {
                     })}
                   </div>
                 ) : (
-                  <div style={{ height: "100px"}}>
                     <div style={S.muted}>No add-ons for this category.</div>
-                  </div>
                   
                 )}
               </div>
@@ -383,17 +381,4 @@ function toggleAddon(addon, catId) {
 }
 
 
-export default function BookingPage() {
-  return (
-    <div style={S.page}>
-      <h1 style={{ fontWeight: 500,marginBottom: 24, fontFamily: "albert sans", color: "#DDAD18", fontSize: 32 }}>Select Services</h1>
-     
-
-      <ServiceSelector
-        data={servicesData}
-        currency="₱"
-        onChange={(payload) => console.log("Selected:", payload)}
-      />
-    </div>
-  );
-}
+export default ServiceSelector;

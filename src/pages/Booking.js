@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 import dayjs from "dayjs";
-import ServicesSection from "../components/selectServices";
+import ServiceSelector from "../components/selectServices";
 
 function Booking() {
-
 
   const [cartSelection, setCartSelection] = useState({ items: [], subtotal: 0, currency: "₱" });
   const servicesData = require("../services/categories_with_services.json");
 
-  
   //loading state
   const [isLoading, setIsLoading] = useState(false);
-
 
   //for modals
   const [showResultModal, setShowResultModal] = useState(false);
   const [bookingResult, setBookingResult] = useState([]);
-
-
 
   // for calendar
   const today = dayjs();
@@ -50,8 +45,6 @@ while (start <= end) {
   start.setMinutes(start.getMinutes() + 30);
 }
 
-
-
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -67,7 +60,6 @@ while (start <= end) {
   };
 
   const isPastDate = (day) => day.isBefore(today, "day");
-
 
 
 const handleConfirmBooking = async () => {
@@ -204,11 +196,12 @@ const handleConfirmBooking = async () => {
 
 
       <section className="select-services" style={{width: "100%"}}>
-        <ServicesSection
+        <ServiceSelector
           data={servicesData}
           currency="₱"
-          onChange={setCartSelection} 
+          onChange={setCartSelection}
         />
+\
       </section>
 
 
@@ -348,8 +341,7 @@ const handleConfirmBooking = async () => {
       !form.name ||
       !form.email ||
       !form.contact ||
-      !form.date ||
-      cartSelection.items.length === 0
+      !form.date 
     ) {
       alert("Please fill out all fields.");
       return;
@@ -382,76 +374,87 @@ const handleConfirmBooking = async () => {
 
 
       {/* Modal */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h2>Booking Summary</h2> <hr></hr>
+      {/* Modal */}
+{showModal && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <h2>Booking Summary</h2>
+      <hr />
 
-            
-            <p><strong>Name:</strong> {form.name}</p>
-            <p><strong>Email:</strong> {form.email}</p>
-             <p><strong>Contact:</strong> {form.contact}</p> <hr></hr>
+      {/* Customer Info */}
+      <p><strong>Name:</strong> {form.name}</p>
+      <p><strong>Email:</strong> {form.email}</p>
+      <p><strong>Contact:</strong> {form.contact}</p>
+      <hr />
 
-            <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
-            <p><strong>Date:</strong> {form.date}</p>
-            <p><strong>Time:</strong> {selectedSlot !== null ? timeSlots[selectedSlot] : "-"}</p></div>
+      {/* Date & Time */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <p><strong>Date:</strong> {form.date}</p>
+        <p><strong>Time:</strong> {selectedSlot !== null ? timeSlots[selectedSlot] : "-"}</p>
+      </div>
+      <hr />
 
-            <hr></hr>
+      {/* Services */}
+      {cartSelection.items.length > 0 ? (
+        <div style={{ maxHeight: "200px", overflowY: "auto" }}>
+          <p style={{ marginTop: "0px" }}><strong>Services:</strong></p>
+          <ul className="service-list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {cartSelection.items.map(item => (
+              <li key={item.service.id} className="service-item">
+                <span>{item.service.name}</span>
+                <span className="service-price">
+                  {cartSelection.currency}{Number(item.service.price).toLocaleString()}
+                </span>
 
-            
-            
+                {/* Add-ons */}
+                {item.addons.length > 0 && (
+                  <ul style={{ listStyle: "none", paddingLeft: "16px", marginTop: "4px" }}>
+                    {item.addons.map(addon => (
+                      <li key={addon.id} style={{ fontSize: "14px", color: "#555" }}>
+                        ➝ {addon.addon_name}
+                        <span style={{ float: "right" }}>
+                          {cartSelection.currency}{Number(addon.addon_price).toLocaleString()}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+          <hr />
+          <p style={{ display: "flex", justifyContent: "space-between", fontFamily: "monospace" }}>
+            <strong>Total</strong>
+            <strong>{cartSelection.currency}{cartSelection.subtotal.toLocaleString()}</strong>
+          </p>
+        </div>
+      ) : (
+        <p style={{ marginTop: "0px", color: "red" }}>
+          <strong>No services selected. Please go back and choose a service.</strong>
+        </p>
+      )}
 
-
-
-
-          {cartSelection.items.length > 0 ? (
-  <div style={{ overflowY: "auto" }}>
-    <p style={{ marginTop: "0px" }}><strong>Services:</strong></p>
-    <ul className="service-list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-      {cartSelection.items.map(item => (
-        <li key={item.service.id} className="service-item">
-          <span className="service-item">{item.service.name}</span>
-          <span className="service-price">
-            {cartSelection.currency}{Number(item.service.price).toLocaleString()}
-          </span>
-
-          {/* Show Add-ons if selected */}
-          {item.addons.length > 0 && (
-            <ul style={{ listStyle: "none", paddingLeft: "16px", marginTop: "4px" }}>
-              {item.addons.map(addon => (
-                <li key={addon.id} style={{ fontSize: "14px", color: "#555" }}>
-                  ➝ {addon.addon_name}
-                  <span style={{ float: "right" }}>
-                    {cartSelection.currency}{Number(addon.addon_price).toLocaleString()}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
-    </ul>
-    <hr />
-    <p style={{ display: "flex", justifyContent: "space-between", fontFamily: "monospace" }}>
-      <strong>Total</strong>
-      <strong>
-        {cartSelection.currency}{cartSelection.subtotal.toLocaleString()}
-      </strong>
-    </p>
+      {/* Buttons */}
+      <div className="modal-buttons-wrap" style={{ marginTop: "20px" }}>
+        <button
+          className="modal-button confirm"
+          onClick={handleConfirmBooking}
+          disabled={isLoading || cartSelection.items.length === 0}
+        >
+          {isLoading ? "Loading..." : "Confirm"}
+        </button>
+        <button
+          className="modal-button cancel"
+          onClick={() => setShowModal(false)}
+          disabled={isLoading}
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
   </div>
-) : (
-  <p style={{ marginTop: "0px" }}><strong>Services:</strong> -</p>
 )}
 
-
-            
-            <div className="modal-buttons-wrap" style={{ marginTop: "20px" }}>
-              <button className="modal-button confirm" onClick={handleConfirmBooking} disabled={isLoading}> {isLoading ? "Loading..." : "Confirm"} </button>
-              <button className="modal-button cancel"  onClick={() => setShowModal(false)} disabled={isLoading}>Cancel</button>
-            </div>
-          </div>
-        </div>
-      )}  
 
 
       {showResultModal && (
