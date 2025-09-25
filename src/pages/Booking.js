@@ -6,21 +6,7 @@ function Booking() {
 
 
   const [cartSelection, setCartSelection] = useState({ items: [], subtotal: 0, currency: "₱" });
-
-  const toggleCategory = (label) => {
-    setOpenCategory(openCategory === label ? null : label);
-  };
-
-    const handleSelect = (service) => {
-    setSelectedService(service.id);
-  };
-
-
-  const [openCategory, setOpenCategory] = useState(null);
-  const [selectedService, setSelectedService] = useState(null);
-
-
-  const [selectedServices, setSelectedServices] = useState([]);
+  const servicesData = require("../services/services.json");
 
   
   //loading state
@@ -70,9 +56,11 @@ while (start <= end) {
     name: "",
     email: "",
     contact: "",
+    services: "",
+    total: "",
     date: "",
     time: "",
-    service: "",
+    
   });
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -200,7 +188,9 @@ setShowResultModal(true);
 
       <section className="select-services" style={{width: "100%"}}>
         <ServicesSection
-          onChange={setCartSelection}
+          data={servicesData}
+          currency="₱"
+          onChange={setCartSelection} 
         />
       </section>
 
@@ -342,8 +332,7 @@ setShowResultModal(true);
       !form.email ||
       !form.contact ||
       !form.date ||
-      selectedSlot === null ||
-      selectedServices.length === 0
+      cartSelection.items.length === 0
     ) {
       alert("Please fill out all fields.");
       return;
