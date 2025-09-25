@@ -12,6 +12,31 @@ function About() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
 
+   // --- Auto-scroll effect ---
+       useEffect(() => {
+      const scrollContainer = scrollRef.current;
+      if (!scrollContainer) return;
+    
+      let scrollAmount = 0;
+      const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    
+      const smoothScroll = setInterval(() => {
+        if (scrollAmount < maxScroll) {
+          scrollAmount += 2; // scroll 2px per tick (adjust for speed)
+          scrollContainer.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        } else {
+          scrollAmount = 0;
+          scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+      }, 20); // every 20ms (adjust for smoothness)
+    
+      return () => clearInterval(smoothScroll);
+    }, [services.length]);
+
+
   const updateCurrentIndex = () => {
   const scrollContainer = scrollRef.current;
   if (!scrollContainer) return;

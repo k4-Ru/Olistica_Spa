@@ -64,9 +64,9 @@ while (start <= end) {
 
 
 const handleConfirmBooking = async () => {
-  console.log("🔍 Form data:", form);
-  console.log("🔍 Selected slot:", selectedSlot, "Time:", timeSlots[selectedSlot]);
-  console.log("🔍 Cart selection:", cartSelection);
+  //console.log("🔍 Form data:", form);
+  //console.log("🔍 Selected slot:", selectedSlot, "Time:", timeSlots[selectedSlot]);
+  //console.log("🔍 Cart selection:", cartSelection);
 
   if (
     !form.name ||
