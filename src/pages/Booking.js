@@ -6,7 +6,7 @@ function Booking() {
 
 
   const [cartSelection, setCartSelection] = useState({ items: [], subtotal: 0, currency: "₱" });
-  const servicesData = require("../services/services.json");
+  const servicesData = require("../services/categories_with_services.json");
 
   
   //loading state
@@ -56,11 +56,8 @@ while (start <= end) {
     name: "",
     email: "",
     contact: "",
-    services: "",
-    total: "",
     date: "",
     time: "",
-    
   });
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -74,56 +71,61 @@ while (start <= end) {
 
 
 
- /* const handleConfirmBooking = async () => {
+ const handleConfirmBooking = async () => {
   if (
     !form.name ||
     !form.email ||
     !form.contact ||
     !form.date ||
     selectedSlot === null ||
-    selectedServices === null
+    cartSelection.items.length === 0
   ) {
     alert("Please fill out all fields.");
     return;
   }
 
-   if (isLoading) return;
+  if (isLoading) return;
+  setIsLoading(true);
 
-  setIsLoading(true); 
-
-  const dataToSend = {
+  const bookingData = {
     ...form,
+    date: form.date,
     time: timeSlots[selectedSlot],
-    service: selectedServices.map(i => services[i]?.name).join(", "),
+    services: cartSelection.items.map(item => ({
+      service: item.service.name,
+      price: item.service.price,
+      addons: item.addons.map(a => ({
+        name: a.addon_name,
+        price: a.addon_price,
+      })),
+    })),
+    subtotal: cartSelection.subtotal,
+    currency: cartSelection.currency,
+  };
 
-  };  
+  try {
+    const response = await fetch("/api/server", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(bookingData),
+    });
 
-
-
-    try {
-  const response = await fetch("/api/server", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(dataToSend),
-  });
-  const result = await response.json();
-
-  if (result?.success) {
-    setBookingResult("success");
-  } else {
+    const result = await response.json();
+    if (result?.success) {
+      setBookingResult("success");
+    } else {
+      setBookingResult("error");
+    }
+  } catch (error) {
+    console.error(error);
     setBookingResult("error");
+  } finally {
+    setIsLoading(false);
+    setShowModal(false);
+    setShowResultModal(true);
   }
-} catch (error) {
-  console.error(error);
-  setBookingResult("error");
-} finally {
-  setIsLoading (false);
-  setShowModal(false);
-setShowResultModal(true);
+};
 
-}
-
-  };*/
 
   return (
     <div>
@@ -364,7 +366,7 @@ setShowResultModal(true);
 
 
 
-      {/* Modal 
+      {/* Modal */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -387,29 +389,45 @@ setShowResultModal(true);
 
 
 
-          {selectedServices.length > 0 ? (
-  <div style={{ overflowY: 'auto' }}>
-    <p style={{marginTop:"0px"}}><strong>Services:</strong></p>
-    <ul  className='service-list'style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-      {selectedServices.map(i => (
-        <li
-          key={i}
-          className="service-item"
-        >
-          <span className="service-item">{services[i].name}</span>
-          <span className="service-price">₱{services[i].price.toLocaleString()}</span>
+          {cartSelection.items.length > 0 ? (
+  <div style={{ overflowY: "auto" }}>
+    <p style={{ marginTop: "0px" }}><strong>Services:</strong></p>
+    <ul className="service-list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+      {cartSelection.items.map(item => (
+        <li key={item.service.id} className="service-item">
+          <span className="service-item">{item.service.name}</span>
+          <span className="service-price">
+            {cartSelection.currency}{Number(item.service.price).toLocaleString()}
+          </span>
+
+          {/* Show Add-ons if selected */}
+          {item.addons.length > 0 && (
+            <ul style={{ listStyle: "none", paddingLeft: "16px", marginTop: "4px" }}>
+              {item.addons.map(addon => (
+                <li key={addon.id} style={{ fontSize: "14px", color: "#555" }}>
+                  ➝ {addon.addon_name}
+                  <span style={{ float: "right" }}>
+                    {cartSelection.currency}{Number(addon.addon_price).toLocaleString()}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
       ))}
     </ul>
     <hr />
-    <p style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'monospace' }}>
+    <p style={{ display: "flex", justifyContent: "space-between", fontFamily: "monospace" }}>
       <strong>Total</strong>
-      <strong>₱{selectedServices.reduce((sum, i) => sum + services[i].price, 0).toLocaleString()}</strong>
+      <strong>
+        {cartSelection.currency}{cartSelection.subtotal.toLocaleString()}
+      </strong>
     </p>
   </div>
 ) : (
-  <p style={{marginTop:"0px"}}><strong>Services:</strong> -</p>
+  <p style={{ marginTop: "0px" }}><strong>Services:</strong> -</p>
 )}
+
 
             
             <div className="modal-buttons-wrap" style={{ marginTop: "20px" }}>
@@ -418,7 +436,7 @@ setShowResultModal(true);
             </div>
           </div>
         </div>
-      )}  */}
+      )}  
 
 
       {showResultModal && (
