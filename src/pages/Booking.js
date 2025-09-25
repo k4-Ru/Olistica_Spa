@@ -425,7 +425,7 @@ const handleConfirmBooking = async () => {
             ))}
           </ul>
           <hr />
-          <p style={{ display: "flex", justifyContent: "space-between", fontFamily: "monospace" }}>
+          <p style={{ display: "flex", justifyContent: "space-between", fontFamily: "albert sans" }}>
             <strong>Total</strong>
             <strong>{cartSelection.currency}{cartSelection.subtotal.toLocaleString()}</strong>
           </p>
