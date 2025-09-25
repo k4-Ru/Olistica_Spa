@@ -312,7 +312,7 @@ section{
   font-family: "Ysabeau Office";
   font-size: 32px;
   font-weight: medium;
-  
+  margin-bottom: 0;
 }
 .service-time {
   color: #b9b197;
@@ -647,6 +647,58 @@ td {
 
 
 
+
+
+.services {
+  background-color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 20px !important;
+
+  }
+  .services {
+    font-size: 14px !important;
+    background-color: #fff;
+
+  }
+  .description {
+    font-size: 12px !important;
+  }
+  .best-seller {
+    font-size: 12px !important;
+    color: #DDAD18;
+  }
+  .duration {
+    font-size: 12px !important;
+  }
+  .price {
+    font-size: 13px !important;
+  }
+  .addon-name {
+    font-size: 14px !important;
+  }
+  .addon-desc {
+    font-size: 12px !important;
+  }
+  .addon-price {
+    font-size: 12px !important;
+  }
+  .category-name {
+    font-size: 16px !important;
+    padding: 8px 10px !important;
+  }
+  .search-ph{
+    font-size: 14px !important;
+  }
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr !important;
+  }
+}
 
 
 

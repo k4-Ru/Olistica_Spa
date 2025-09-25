@@ -1,4 +1,4 @@
 import { Router } from "react-router-dom";
 
-fucntion Review() {
+function Review() {
   return ( );}

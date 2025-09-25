@@ -1,0 +1,868 @@
+[ 
+  {
+    "id": 1,
+    "category": "Body massage",
+    "has_best_seller": true,
+    "has_duration": true,
+    "has_addons": true,
+    "services": [
+      {
+        "id": "bod-mas-01",
+        "name": "Swedish Massage",
+        "description": "",
+        "price": 600,
+        "duration": "1 hr",
+        "best_seller": false
+      },
+      {
+        "id": "bod-mas-02",
+        "name": "Shiatsu Massage",
+        "description": "",
+        "price": 700,
+        "duration": "1 hr",
+        "best_seller": false
+      },
+      {
+        "id": "bod-mas-03",
+        "name": "Signature Body Massage",
+        "description": "",
+        "price": 900,
+        "duration": "1 hr & 30 mins",
+        "best_seller": true
+      },
+      {
+        "id": "bod-mas-04",
+        "name": "Kid's Body Massage",
+        "description": "",
+        "price": 450,
+        "duration": "1 hr",
+        "best_seller": false
+      },
+      {
+        "id": "bod-mas-05",
+        "name": "Deep Tissue Massage",
+        "description": "",
+        "price": 1450,
+        "duration": "1 hr",
+        "best_seller": true
+      },
+      {
+        "id": "bod-mas-06",
+        "name": "Sports Massage",
+        "description": "",
+        "price": 1550,
+        "duration": "1 hr",
+        "best_seller": false
+      },
+      {
+        "id": "bod-mas-07",
+        "name": "Lymphatic Massage",
+        "description": "",
+        "price": 1450,
+        "duration": "1 hr",
+        "best_seller": false
+      },
+      {
+        "id": "bod-mas-08",
+        "name": "Aroma Therapy Massage",
+        "description": "",
+        "price": 1550,
+        "duration": "1 hr",
+        "best_seller": true
+      },
+      {
+        "id": "bod-mas-09",
+        "name": "Traditional Hilot Massage",
+        "description": "",
+        "price": 1750,
+        "duration": "1 hr",
+        "best_seller": false
+      },
+      {
+        "id": "bod-mas-10",
+        "name": "Ventosa Massage",
+        "description": "",
+        "price": 1550,
+        "duration": "1 hr & 30 mins",
+        "best_seller": true
+      },
+      {
+        "id": "bod-mas-11",
+        "name": "Royalty Massage(2 Therapists)",
+        "description": "",
+        "price": 1550,
+        "duration": "1 hr",
+        "best_seller": false
+      }
+    ],
+    "addons": [
+      {
+        "id": "bod-mas-addn-1",
+        "addon_name" :"Ear Candling",
+        "addon_description": "",
+        "addon_price": 550
+      },
+      {
+        "id": "bod-mas-addn-2",
+        "addon_name" :"Hot Stone",
+        "addon_description": "",
+        "addon_price": 550
+      },
+      {
+        "id": "bod-mas-addn-3",
+        "addon_name": "Herbal Balls",
+        "addon_description": "",
+        "addon_price": 700
+      },
+      {
+        "id": "bod-mas-addn-4",
+        "addon_name" :"Convert Oil to Lotion",
+        "addon_description": "",
+        "addon_price": 150
+      },
+      {
+        "id": "bod-mas-addn-5",
+        "addon_name" :"Shower",
+        "addon_description": "",
+        "addon_price": 150
+      },
+      {
+        "id": "bod-mas-addn-6",
+        "addon_name" :"Hot Pack",
+        "addon_description": "",
+        "addon_price": 550
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Body whitening treatments",
+    "has_best_seller": false,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "bod-whit-tr-01",
+        "name": "Underarm Whitening W/ IPL (per session)",
+        "description": "",
+        "price": 750
+      },
+      {
+        "id": "bod-whit-tr-02",
+        "name": "Underarm Whitening W/ IPL ( 10 treatment packages)",
+        "description": "",
+        "price": 6499
+      },
+      {
+        "id": "bod-whit-tr-03",
+        "name": "Inguinal Whitening W/ IPL (per session)",
+        "description": "",
+        "price": 850
+      },
+      {
+        "id": "bod-whit-tr-04",
+        "name": "Inguinal Whitening W/ IPL ( 10 treatment packages)",
+        "description": "",
+        "price": 7499
+      },
+      {
+        "id": "bod-whit-tr-05",
+        "name": "Buttline Whitening (per session)",
+        "description": "",
+        "price": 550
+      },
+      {
+        "id": "bod-whit-tr-06",
+        "name": "Buttline Whitening ( 10 treatment packages)",
+        "description": "",
+        "price": 4499
+      },
+      {
+        "id": "bod-whit-tr-07",
+        "name": "Back Whitening (per session)",
+        "description": "",
+        "price": 750
+      },
+      {
+        "id": "bod-whit-tr-08",
+        "name": "Back Whitening ( 10 treatment packages)",
+        "description": "",
+        "price": 6499
+      },
+      {
+        "id": "bod-whit-tr-09",
+        "name": "Elbow Whitening (per session)",
+        "description": "",
+        "price": 550
+      },
+      {
+        "id": "bod-whit-tr-10",
+        "name": "Elbow Whitening ( 10 treatment packages)",
+        "description": "",
+        "price": 4499
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Facial Treatments",
+    "has_best_seller": true,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "facl-tr-01",
+        "name": "Basic Facial",
+        "description": "",
+        "price": 650,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-02",
+        "name": "Relaxing Facial",
+        "description": "",
+        "price": 650,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-03",
+        "name": "Acne Facial",
+        "description": "",
+        "price": 1250,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-04",
+        "name": "Deep Cleansing Facial",
+        "description": "",
+        "price": 1050,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-06",
+        "name": "Anti-Aging Facial",
+        "description": "",
+        "price": 1250,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-07",
+        "name": "Whitening Facial",
+        "description": "",
+        "price": 1250,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-08",
+        "name": "BB Glow Facial",
+        "description": "",
+        "price": 2550,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-09",
+        "name": "Light Therapy Signature Facial",
+        "description": "",
+        "price": 1850,
+        "best_seller": true
+      },
+      {
+        "id": "facl-tr-10",
+        "name": "Korean Goddess Facial",
+        "description": "",
+        "price": 2050,
+        "best_seller": true
+      },
+      {
+        "id": "facl-tr-11",
+        "name":"Aqua Peel Facial",
+        "description": "",
+        "price": 1850,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-12",
+        "name":"Hydra Facial",
+        "description": "",
+        "price": 1550,
+        "best_seller": false
+      },
+      {
+        "id": "facl-tr-13",
+        "name":"Olistica Signature Facial",
+        "description": "",
+        "price": 1450,
+        "best_seller": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Brows and lashes",
+    "has_best_seller": false,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "brw-lash-01",
+       "name": "Eyelash Perming",
+       "description": "",
+       "price": 550
+      },
+      {
+        "id": "brw-lash-02",
+       "name": "Eyelash Keralift",
+        "description": "",
+       "price": 850
+      },
+      {
+        "id": "brw-lash-03",
+       "name": "Eyebrows Lamination",
+        "description": "",
+       "price": 850
+      },
+      {
+        "id": "brw-lash-04",
+       "name": "Eyebrows Tinting",
+        "description": "",
+       "price": 550
+      },
+      {
+        "id": "brw-lash-05",
+       "name": "Eyebrows Extensions",
+        "description": "",
+       "price": 1550
+      },
+      {
+        "id": "brw-lash-06",
+       "name": "Natural Eyelash",
+        "description": "",
+       "price": 850
+      },
+      {
+        "id": "brw-lash-07",
+       "name": "Classic Eyelash",
+        "description": "",
+       "price":  1000
+      },
+      {
+        "id": "brw-lash-08",
+       "name": "Classic Foxeye",
+        "description": "",
+       "price": 1250
+      },
+      {
+        "id": "brw-lash-09",
+       "name": "Classic Wispy",
+        "description": "",
+       "price": 1250
+      },
+      {
+        "id": "brw-lash-10",
+       "name": "L Curl Classic",
+        "description": "",
+       "price": 1500
+      },
+      {
+        "id": "brw-lash-11",
+       "name": "Volume Lashes",
+        "description": "",
+       "price": 2350
+      },
+      {
+        "id": "brw-lash-12",
+       "name": "Mega Volume",
+        "description": "",
+       "price": 2799
+      },
+      {
+        "id": "brw-lash-13",
+       "name": "Anime Lashes",
+        "description": "",
+       "price": 2500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Hair removals - Hot Waxing",
+    "has_best_seller": false,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      { "id": "hr-remv-hot-01","name": "Arms", "description": "*Women", "price": 950 },
+      { "id": "hr-remv-hot-02","name": "Arms", "description": "*Men", "price": 1150 },
+      { "id": "hr-remv-hot-03","name": "Back", "description": "*Women", "price": 1250 },
+      { "id": "hr-remv-hot-04","name": "Back", "description": "*Men", "price": 1450 },
+      { "id": "hr-remv-hot-05","name": "Bikini/Butt Cheek", "description": "*Women", "price":  950},
+      { "id": "hr-remv-hot-06","name": "Bikini/Butt Cheek", "description": "*Men", "price": 1150 },
+      { "id": "hr-remv-hot-07","name": "Chest", "description": "*Women", "price": 850 },
+      { "id": "hr-remv-hot-08","name": "Chest", "description": "*Men", "price": 1250 },
+      { "id": "hr-remv-hot-09","name": "Eyebrow", "description": "*Women", "price": 450 },
+      { "id": "hr-remv-hot-10","name": "Eyebrow", "description": "*Men", "price": 650 },
+      { "id": "hr-remv-hot-11","name": "Face", "description": "*Women", "price": 850 },
+      { "id": "hr-remv-hot-12","name": "Face", "description": "*Men", "price": 1150 },
+      { "id": "hr-remv-hot-13","name": "Full legs", "description": "*Women", "price": 1850 },
+      { "id": "hr-remv-hot-14","name": "Full legs", "description": "*Men", "price": 2450 },
+      { "id": "hr-remv-hot-15","name": "Half legs", "description": "*Women", "price": 1050 },
+      { "id": "hr-remv-hot-16","name": "Half legs", "description": "*Men", "price": 1450 },
+      { "id": "hr-remv-hot-17","name": "Tummy", "description": "*Women", "price": 850 },
+      { "id": "hr-remv-hot-18","name": "Tummy", "description": "*Men", "price": 1050 },
+      { "id": "hr-remv-hot-19","name": "Underarms", "description": "*Women", "price": 550 },
+      { "id": "hr-remv-hot-20","name": "Underarms", "description": "*Men", "price": 750 },
+      { "id": "hr-remv-hot-21","name": "Upper lip", "description": "*Women", "price": 450 },
+      { "id": "hr-remv-hot-22","name": "Upper lip", "description": "*Men", "price": 850 },
+      { "id": "hr-remv-hot-23","name": "Brazilian", "description": "*Women", "price": 1850 },
+      { "id": "hr-remv-hot-24","name": "Brazilian", "description": "*Men", "price": 2050 }
+    ]
+  },
+   {
+    "id": 6,
+    "category": "Hair removals - Cold Waxing",
+    "has_best_seller": false,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      { "id": "hr-remv-cold-01","name": "Arms", "description": "*Women", "price": 800 },
+      { "id": "hr-remv-cold-02","name": "Arms", "description": "*Men", "price": 1000 },
+      { "id": "hr-remv-cold-03","name": "Back", "description": "*Women", "price": 1100 },
+      { "id": "hr-remv-cold-04","name": "Back", "description": "*Men", "price": 1300 },
+      { "id": "hr-remv-cold-05","name": "Bikini/Butt Cheek", "description": "*Women", "price":  800},
+      { "id": "hr-remv-cold-06","name": "Bikini/Butt Cheek", "description": "*Men", "price": 1000 },
+      { "id": "hr-remv-cold-07","name": "Chest", "description": "*Women", "price": 700 },
+      { "id": "hr-remv-cold-08","name": "Chest", "description": "*Men", "price": 1100 },
+      { "id": "hr-remv-cold-09","name": "Eyebrow", "description": "*Women", "price": 300 },
+      { "id": "hr-remv-cold-10","name": "Eyebrow", "description": "*Men", "price": 500 },
+      { "id": "hr-remv-cold-11","name": "Face", "description": "*Women", "price": 700 },
+      { "id": "hr-remv-cold-12","name": "Face", "description": "*Men", "price": 1000 },
+      { "id": "hr-remv-cold-13","name": "Full legs", "description": "*Women", "price": 1700 },
+      { "id": "hr-remv-cold-14","name": "Full legs", "description": "*Men", "price": 2300 },
+      { "id": "hr-remv-cold-15","name": "Half legs", "description": "*Women", "price": 900 },
+      { "id": "hr-remv-cold-16","name": "Half legs", "description": "*Men", "price": 1300 },
+      { "id": "hr-remv-cold-17","name": "Tummy", "description": "*Women", "price": 700 },
+      { "id": "hr-remv-cold-18","name": "Tummy", "description": "*Men", "price": 900 },
+      { "id": "hr-remv-cold-19","name": "Underarms", "description": "*Women", "price": 400 },
+      { "id": "hr-remv-cold-20","name": "Underarms", "description": "*Men", "price": 600 },
+      { "id": "hr-remv-cold-21","name": "Upper lip", "description": "*Women", "price": 300 },
+      { "id": "hr-remv-cold-22","name": "Upper lip", "description": "*Men", "price": 700 },
+      { "id": "hr-remv-cold-23","name": "Brazilian", "description": "*Women", "price": 1700 },
+      { "id": "hr-remv-cold-24","name": "Brazilian", "description": "*Men", "price": 1900 }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Nails & Foot care - Hands",
+    "has_best_seller": false,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "nls-ft-hand-01",
+        "name": "Basic Manicure",
+        "description": "*without polish",
+        "price": 200
+      },
+      {
+        "id": "nls-ft-hand-02",
+        "name": "Holistic Manicure",
+        "description": "*with polish",
+        "price": 250
+      },
+      {
+        "id": "nls-ft-hand-03",
+        "name": "Gel Polish - Regular",
+        "description": "",
+        "price": 500
+      },
+      {
+        "id": "nls-ft-hand-04",
+        "name": "Gel Polish - Classic",
+        "description": "",
+        "price": 700
+      },
+      {
+        "id": "nls-ft-hand-05",
+        "name": "Gel Polish - VIP",
+        "description": "",
+        "price": 849
+      },
+      {
+        "id": "nls-ft-hand-06",
+        "name": "Short to Medium",
+        "description": "Soft Gel Nail Extensions",
+        "price": 1250
+      },
+      {
+        "id": "nls-ft-hand-07",
+        "name": "Long to Extra Long",
+        "description": "Soft Gel Nail Extensions",
+        "price": 1550
+      },
+      {
+        "id": "nls-ft-hand-08",
+        "name": "Short to Medium",
+        "description": "Poly Gel Nail Extensions",
+        "price": 1450
+      },
+      {
+        "id": "nls-ft-hand-09",
+        "name": "Long to Extra Long",
+        "description": "Poly Gel Nail Extensions",
+        "price": 1750
+      },
+      {
+        "id": "nls-ft-hand-10",
+        "name": "Powder Dip Nails Extension",
+        "description": "Poly Gel Nail Extensions",
+        "price": 2000
+      },
+      {
+        "id": "nls-ft-hand-11",
+        "name": "Gel Polish Removal - Basic",
+        "description": " Gel & Nail Extension Removal",
+        "price": 250
+      },
+      {
+        "id": "nls-ft-hand-12",
+        "name": "Gel Polish Removal - Branded",
+        "description": " Gel & Nail Extension Removal",
+        "price": 350
+      },
+      {
+        "id": "nls-ft-hand-13",
+        "name": " Nail Extension Removal",
+        "description": " Gel & Nail Extension Removal",
+        "price": 550
+      },
+      {
+        "id": "nls-ft-hand-14",
+        "name": "Hand Paraffin w/ Hand Massage",
+        "description": " Paraffin Wax",
+        "price": 750
+      },
+      {
+        "id": "nls-ft-hand-15",
+        "name": "Foot Paraffin w/ Foot Massage",
+        "description": " Paraffin Wax",
+        "price": 1050
+      },
+      {
+        "id": "nls-ft-hand-16",
+        "name": " Hand & Foot Paraffin w/ Massage",
+        "description": " Paraffin Wax",
+        "price": 1550
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Nails & Foot care - Foot",
+    "has_best_seller_": false,
+    "has_duration_": false,
+    "has_addons_": false,
+    "services": [
+      {
+        "id": "nls-ft-foot-01",
+        "name": "Basic Pedicure",
+        "description": "",
+        "price": 250
+      },
+      {
+        "id": "nls-ft-foot-02",
+        "name": "Holistic Pedicure",
+        "description": "*with polish",
+        "price": 300
+      },
+      {
+        "id": "nls-ft-foot-03",
+        "name": "Gel Polish - Regular",
+        "description": "",
+        "price": 600
+      },
+      {
+        "id": "nls-ft-foot-04",
+        "name": "Gel Polish - Classic",
+        "description": "",
+        "price": 700
+      },
+      {
+        "id": "nls-ft-foot-05",
+        "name": "Gel Polish - VIP",
+        "description": "",
+        "price": 849
+      },
+      {
+        "id": "nls-ft-foot-06",
+        "name": "Basic Foot Spa",
+        "description": "Basic Cleaning & Scrub & Moisturizing - No Massage",
+        "price": 400
+      },
+      {
+        "id": "nls-ft-foot-07",
+        "name": "Classic Foot Spa",
+        "description": "Cleaning, Scrub, Moisturizing and 30mins Foot Massage",
+        "price": 650
+      },
+      {
+        "id": "nls-ft-foot-08",
+        "name": "VIP Foot Spa",
+        "description": " Cleaning, Scrub, Moisturizing, Foot Mask and 30mins Foot Massage",
+        "price": 1050
+      },
+      {
+        "id": "nls-ft-foot-09",
+        "name": "Foot Massage (30 mins)",
+        "description": "",
+        "price": 350
+      },
+      {
+        "id": "nls-ft-foot-10",
+        "name": "Foot Massage (1 hr)",
+        "description": "",
+        "price": 550
+      },
+      {
+        "id": "nls-ft-foot-11",
+        "name": "Basic Reflex (30 mins)",
+        "description": "Foot Reflex A holistic therapy that applies pressure to specific points on the feet to promote relaxation and overall wellness.",
+        "price": 650
+      },
+      {
+        "id": "nls-ft-foot-12",
+        "name": "Full Reflex (1 hr)",
+        "description": "Foot Reflex A holistic therapy that applies pressure to specific points on the feet to promote relaxation and overall wellness.",
+        "price": 1349
+      }
+    ]
+  },
+   {
+    "id": 9,
+    "category": "Nails & Foot care - Packages",
+    "has_best_seller": false,
+    "has_duration": false,
+    "has_addons": true,
+    "services": [
+      {
+        "id": "nls-ft-pack-01",
+        "name": "Package A",
+        "description": "• Holistic Manicure \n• Holistic Pedicure",
+        "price": 500
+      },
+      {
+        "id": "nls-ft-pack-02",
+        "name": "Package B",
+        "description": "• Holistic Manicure \n• Holistic Pedicure \n• Foot Spa (30mins)",
+        "price": 850
+      },
+      {
+        "id": "nls-ft-pack-03",
+        "name": "Package C",
+        "description": "• Holistic Manicure\n• Holistic Pedicure\n• Foot Spa\n• Foot Massage\n• Leg & Foot Mask (with Nail Polish)",
+        "price": 1400
+      },
+      {
+        "id": "nls-ft-pack-04",
+        "name": "Package D",
+        "description": "• Holistic Manicure\n• Holistic Pedicure\n• Foot Spa\n• Foot Massage\n• Foot Paraffin",
+        "price": 2050
+      }
+    ],
+    "addons": [
+      {
+        "id": "nls-ft-pack-addn-01",
+        "addon_name" :"Manicure Gel Polish",
+        "addon_description": "*Convert Regular Polish To Gel",
+        "addon_price": 150
+      },
+      {
+        "id": "nls-ft-pack-addn-02",
+        "addon_name" :"Pedicure Gel Polish",
+        "addon_description": "*Convert Regular Polish To Gel",
+        "addon_price": 200
+      },
+      {
+        "id": "nls-ft-pack-addn-03",
+        "addon_name" :"Mani-Pedi Gel Polish",
+        "addon_description": "*Convert Regular Polish To Gel",
+        "addon_price": 250
+      }
+
+    ]
+
+  },
+  {
+    "id": 10,
+    "category": "Head Spa Packages",
+    "has_best_seller": false,
+    "has_duration": true,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "hd-spa-packs-01",
+        "name": "Basic Head Spa",
+        "description": "• Facial Cleanse\n• Facial Scrub\n• Facial Massage\n• Scalp Massage\n• Shoulder and Neck Massage\n• Hair and Scalp Treatment\n• Hair and Scalp Mask\n• Streaming\n• Hair Blower",
+        "duration": "45 mins",
+        "price": 1500
+      },
+      {
+        "id": "hd-spa-packs-02",
+        "name": "Premium Head Spa",
+        "description": "• Facial Cleanse\n• Facial Scrub\n• Lymphatic Facial Massage\n• Facial Massage\n• Scalp Massage\n• Shoulder and Neck Massage\n• Hair and Scalp Treatment\n• Macadamia Hair Treatment\n• Hair and Scalp Mask\n• Streaming\n• Hair Blower",
+        "duration": "1 hr",
+        "price": 2200
+      },
+      {
+        "id": "hd-spa-packs-03",
+        "name": "Royalty Head Spa",
+        "description": "• Facial Cleanse\n• Facial Scrub\n• Lymphatic Facial Massage\n• Facial Massage\n• Facial Mask\n• Scalp Massage\n• Scalp Scaling\n• Shoulder and Neck Massage\n• Hair and Scalp Treatment\n• Macadamia Hair Treatment\n• Foot & Hand Massage while Streaming\n• Hair and Scalp Mask\n• Streaming\n• Hair Blower",
+        "duration": "1 hr & 30 mins",
+        "price": 3000
+      }
+
+    ]
+  },
+  {
+    "id": 11,
+    "category": "Massage Combos",
+    "has_best_seller": true,
+    "has_duration": true,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "mas-comb-01",
+        "name": "Back Massage with Hot Stone",
+        "description": "",
+        "duration": "1 hr",
+        "price": 850,
+        "best_seller": true
+      },
+      {
+        "id": "mas-comb-02",
+        "name": "Signature Body Massage with Hot Stone OR Ear Candling",
+        "description": "",
+        "duration": "1 hr & 30 mins",
+        "price": 1250,
+        "best_seller": true
+      },
+      {
+        "id": "mas-comb-03",
+        "name": "Body Scrub with Swedish Massage",
+        "description": "",
+        "duration": "1 hr & 30 mins",
+        "price": 1250,
+        "best_seller": false
+      },
+      {
+        "id": "mas-comb-04",
+        "name": "Back Massage & Foot Massage",
+        "description": "",
+        "duration": "1 hr",
+        "price": 900,
+        "best_seller": false
+      },
+      {
+        "id": "mas-comb-05",
+        "name": "Swedish Massage with Hot Pack",
+        "description": "",
+        "duration": "1 hr",
+        "price": 900,
+        "best_seller": false
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "category": "Body treatments",
+    "has_best_seller": false,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "bod-tr-01",
+        "name": "Body Scrub",
+        "price": 1050
+      },
+      {
+        "id": "bod-tr-02",
+        "name": "Body Mask w/ Body Wrap",
+        "price": 2050
+      },
+      {
+        "id": "bod-tr-03",
+        "name": "Body Bleaching",
+        "price": 1350
+      },
+      {
+        "id": "bod-tr-04",
+        "name": "Body Brushing",
+        "price": 2550
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "category": "Spa Packages",
+    "has_best_seller": true,
+    "has_duration": false,
+    "has_addons": false,
+    "services": [
+      {
+        "id": "spa-packs-01",
+        "name": "Bronze",
+        "description": "• Basic Manicure & Pedicure\n• Swedish Massage (1 hr)\n• Basic Foot Spa\n• Basic Facial",
+        "price": 1899,
+        "best_seller": false
+      },
+      {
+        "id": "spa-packs-02",
+        "name": "Silver",
+        "description": "• Basic Manicure & Pedicure\n• Swedish Massage (1 hr)\n• Basic Foot Spa\n• Basic Facial\n• Body Scrub",
+        "price": 2999,
+        "best_seller": false
+      },
+      {
+        "id": "spa-packs-03",
+        "name": "Gold",
+        "description": "• Basic Manicure & Pedicure\n• Body Scrub\n• Signature Massage (1 hr 30 mins)\n• Hot Stone or Ear Candling\n• Classic Foot Spa\n• Basic Facial",
+        "price": 3700,
+        "best_seller": false
+      },
+      {
+        "id": "spa-packs-04",
+        "name": "Platinum",
+        "description": "• Basic Manicure & Pedicure\n• Body Scrub\n• Signature Massage (1 hr 30 mins)\n• Hot Stone or Ear Candling\n• Classic Foot Spa\n• Basic Facial\n• Basic Head Spa Treatment",
+        "price": 4800,
+        "best_seller": false
+      },
+      {
+        "id": "spa-packs-05",
+        "name": "Diamond",
+        "description": "• Basic Manicure & Pedicure\n• Body Scrub\n• Signature Massage (1 hr 30 mins)\n• Hot Stone or Ear Candling\n• VIP Foot Spa\n• Signature Facial\n• Basic Head Spa Treatment",
+        "price": 5800,
+        "best_seller": false
+      },
+      {
+        "id": "spa-packs-06",
+        "name": "Royalty",
+        "description": "• Basic Manicure & Pedicure\n• Body Scrub\n• Signature Massage (1 hr 30 mins)\n• Hot Stone or Ear Candling\n• Body Mask with Body Wrap\n• VIP Foot Spa\n• Signature Facial\n• Premium Head Spa",
+        "price": 8299,
+        "best_seller": false
+      },
+      {
+        "id": "spa-packs-07",
+        "name": "The Gentleman's Facial Treatment",
+        "description": "A complete facial services with mask, diamond peel and beard exfoliation and moisturizing",
+        "price": 2050,
+        "best_seller": false
+      },
+      {
+        "id": "spa-packs-08",
+        "name": "The Gentleman's Spa Break Package",
+        "description": "• Gentleman’s Facial\n• Gentleman’s Body Massage with Hot Stone\n• Gentleman’s Body Scrub\n• Gentleman’s Foot Spa & Foot Massage",
+        "price": 5350,
+        "best_seller": true
+      }
+    ]
+  }
+  
+]

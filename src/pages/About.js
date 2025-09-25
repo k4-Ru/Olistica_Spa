@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import services from '../services.json';
+import services from '../services/services.json';
 import WhatsNew from '../components/WhatsNew';
 
 
@@ -121,7 +121,7 @@ function About() {
 
   <div className='line' style={{height:' 15px', border:'none'}}></div>
 
-      <h1 className="book-title">OUR SERVICES</h1>
+      <h1 className="book-title">WHAT WE OFFER</h1>
 
 
 <div className="scroll-services" ref={scrollRef}>
@@ -134,8 +134,7 @@ function About() {
       <img src={service.image} alt={`Service ${i}`} className="ellipse-img" />
       {i === currentIndex && (
         <>
-          <h1 className='service-name'>{service.name}</h1>
-          <p className='service-time'><span>·</span> {service.time}</p>
+          <h1 className='service-name'>{service.category}</h1>
           <p className="description">{service.description}</p>
         </>
       )}

@@ -1,10 +1,28 @@
 import React, { useState } from "react";
 import dayjs from "dayjs";
-import services from '../services.json';
-
+import ServicesSection from "../components/selectServices";
 
 function Booking() {
 
+
+  const [cartSelection, setCartSelection] = useState({ items: [], subtotal: 0, currency: "₱" });
+
+  const toggleCategory = (label) => {
+    setOpenCategory(openCategory === label ? null : label);
+  };
+
+    const handleSelect = (service) => {
+    setSelectedService(service.id);
+  };
+
+
+  const [openCategory, setOpenCategory] = useState(null);
+  const [selectedService, setSelectedService] = useState(null);
+
+
+  const [selectedServices, setSelectedServices] = useState([]);
+
+  
   //loading state
   const [isLoading, setIsLoading] = useState(false);
 
@@ -57,7 +75,6 @@ while (start <= end) {
     service: "",
   });
   const [selectedSlot, setSelectedSlot] = useState(null);
-  const [selectedServices, setSelectedServices ] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
   const handleDateSelect = (day) => {
@@ -69,7 +86,7 @@ while (start <= end) {
 
 
 
-  const handleConfirmBooking = async () => {
+ /* const handleConfirmBooking = async () => {
   if (
     !form.name ||
     !form.email ||
@@ -91,7 +108,7 @@ while (start <= end) {
     time: timeSlots[selectedSlot],
     service: selectedServices.map(i => services[i]?.name).join(", "),
 
-  };
+  };  
 
 
 
@@ -118,7 +135,7 @@ setShowResultModal(true);
 
 }
 
-  };
+  };*/
 
   return (
     <div>
@@ -177,51 +194,79 @@ setShowResultModal(true);
         </div>
       </section>
 
-      <section className="booking" style={{ paddingBottom: "0px"}}>
-        <h2>Select Service</h2>
-        <div className="service-container">
-          <table className="service-table">
-            <thead>
-              <tr style={{ paddingBottom: "10px", fontSize: "24px" }}>
-                <th>Service</th>
-                <th>Price</th>
-                <th>Duration</th>
-              </tr>
-            </thead>
-            <tbody>
-              {services.map((s, index) => (
-                <tr 
-                  key={index}
-                  className={`service-row ${
-                    selectedServices.includes(index)
-                      ? (index % 2 === 0 ? 'selected-even' : 'selected-odd')
-                      : index % 2 === 0 ? 'even-row' : 'odd-row'
-                  }`}
-                  onClick={() => {
-  setSelectedServices(prev => {
-    if (prev.includes(index)) {
-      return prev.filter(i => i !== index);
-    } else {
-      return [...prev, index]; 
-    }
-  });
-}}
 
-                >
-                  <td>
-                    <div  className="row"style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <div className="image-box" style={{ backgroundImage: `url(${s.image})` }} />
-                      <span>{s.name}</span>
-                    </div>
-                  </td>
-                  <td>₱{s.price}</td>
-                  <td>{s.time}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+
+
+
+      <section className="select-services" style={{width: "100%"}}>
+        <ServicesSection
+          onChange={setCartSelection}
+        />
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Form */}
       <section className="booking" style={{ padding: "0px", backgroundColor: "#171915" }}>
@@ -330,7 +375,7 @@ setShowResultModal(true);
 
 
 
-      {/* Modal */}
+      {/* Modal 
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -377,15 +422,6 @@ setShowResultModal(true);
   <p style={{marginTop:"0px"}}><strong>Services:</strong> -</p>
 )}
 
-
-
-
-
-
-
-
-
-
             
             <div className="modal-buttons-wrap" style={{ marginTop: "20px" }}>
               <button className="modal-button confirm" onClick={handleConfirmBooking} disabled={isLoading}> {isLoading ? "Loading..." : "Confirm"} </button>
@@ -393,7 +429,7 @@ setShowResultModal(true);
             </div>
           </div>
         </div>
-      )}
+      )}  */}
 
 
       {showResultModal && (
