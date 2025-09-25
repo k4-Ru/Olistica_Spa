@@ -1,396 +1,42 @@
 [
- {
-  "image": "assets/categ1.png",
-  "category": "Body Massages",
-  "description": "Relaxing and therapeutic massages to ease tension, improve circulation, and promote overall well-being.",
-  "services": [
-    {
-      "id": "swedish_massage",
-      "name": "Swedish Massage",
-      "duration": "1 Hour",
-      "price": 600,
-      "best_seller": false
-    },
-    {
-      "id": "shiatsu_massage",
-      "name": "Shiatsu Massage",
-      "duration": "1 Hour",
-      "price": 700,
-      "best_seller": false
-    },
-    {
-      "id": "signature_body_massage",
-      "name": "Signature Body Massage",
-      "duration": "1 Hour & 30 Mins",
-      "price": 900,
-      "best_seller": true
-    },
-    {
-      "id": "kids_body_massage",
-      "name": "Kid’s Body Massage",
-      "duration": "1 Hour",
-      "price": 450,
-      "best_seller": false
-    },
-    {
-      "id": "deep_tissue_massage",
-      "name": "Deep Tissue Massage",
-      "duration": "1 Hour",
-      "price": 1450,
-      "best_seller": true
-    },
-    {
-      "id": "sports_massage",
-      "name": "Sports Massage",
-      "duration": "1 Hour",
-      "price": 1550,
-      "best_seller": false
-    },
-    {
-      "id": "lymphatic_massage",
-      "name": "Lymphatic Massage",
-      "duration": "1 Hour",
-      "price": 1450,
-      "best_seller": false
-    },
-    {
-      "id": "aroma_therapy_massage",
-      "name": "Aroma Therapy Massage",
-      "duration": "1 Hour",
-      "price": 1550,
-      "best_seller": true
-    },
-    {
-      "id": "traditional_hilot_massage",
-      "name": "Traditional Hilot Massage",
-      "duration": "1 Hour",
-      "price": 1750,
-      "best_seller": false
-    },
-    {
-      "id": "ventosa_massage",
-      "name": "Ventosa Massage",
-      "duration": "1 Hour & 30 Mins",
-      "price": 1550,
-      "best_seller": true
-    },
-    {
-      "id": "royalty_massage",
-      "name": "Royalty Massage",
-      "duration": "1 Hour",
-      "price": 1550,
-      "best_seller": false
-    }
-  ],
-  "add_ons": [
-    {
-      "id": "ear_candling",
-      "name": "Ear Candling",
-      "price": 550
-    },
-    {
-      "id": "hot_stone",
-      "name": "Hot Stone",
-      "price": 550
-    },
-    {
-      "id": "herbal_balls",
-      "name": "Herbal Balls",
-      "price": 700
-    },
-    {
-      "id": "convert_oil_to_lotion",
-      "name": "Convert Oil To Lotion",
-      "price": 150
-    },
-    {
-      "id": "shower",
-      "name": "Shower",
-      "price": 150
-    },
-    {
-      "id": "hot_pack",
-      "name": "Hot Pack",
-      "price": 550
-    }
-  ]
-}, 
-
-
-
-
-
-
-
   {
-  "image": "assets/categ3.png",
-  "category": "Facial Treatments",
-  "description": "Gentle and revitalizing facial treatments designed to cleanse, hydrate, and enhance your skin’s natural glow.",
-  "services": [
-    {
-      "id": "basic_facial",
-      "name": "Basic Facial",
-      "price": 650,
-      "best_seller": false
-    },
-    {
-      "id": "relaxing_facial",
-      "name": "Relaxing Facial",
-      "price": 
-       650
-      ,
-      "best_seller": false
-    },
-    {
-      "id": "acne_facial",
-      "name": "Acne Facial",
-      "price": 1250,
-      "best_seller": false
-    },
-    {
-      "id": "anti_aging_facial",
-      "name": "Anti-Aging Facial",
-      "price": 1250,
-      "best_seller": false
-    },
-    {
-      "id": "bb_glow_facial",
-      "name": "BB Glow Facial",
-      "pricing": {
-        "base": 2550
-      },
-      "best_seller": false
-    },
-    {
-      "id": "deep_cleansing_facial",
-      "name": "Deep Cleansing Facial",
-      "pricing": {
-        "base": 1050
-      },
-      "best_seller": false
-    },
-    {
-      "id": "seaweed_mask_facial",
-      "name": "Facial with Seaweed Mask",
-      "pricing": {
-        "base": 1250
-      },
-      "best_seller": false
-    },
-    {
-      "id": "premium_facial_unspecified",
-      "name": "Premium Facial (Unspecified)",
-      "pricing": {
-        "base": 2550
-      },
-      "best_seller": false
-    },
-    {
-      "id": "whitening_facial",
-      "name": "Whitening Facial",
-      "pricing": {
-        "base": 1250
-      },
-      "best_seller": false
-    },
-    {
-      "id": "light_therapy_signature_facial",
-      "name": "Light Therapy Signature Facial",
-      "pricing": {
-        "base": 1850
-      },
-      "best_seller": true
-    },
-    {
-      "id": "korean_goddess_facial",
-      "name": "Korean Goddess Facial",
-      "pricing": {
-        "base": 2050
-      },
-      "best_seller": true
-    },
-    {
-      "id": "hydrafacial",
-      "name": "HydraFacial",
-      "pricing": {
-        "base": 1550
-      },
-      "best_seller": false
-    },
-    {
-      "id": "aqua_peel_facial",
-      "name": "Aqua Peel Facial",
-      "pricing": {
-        "base": 1850
-      },
-      "best_seller": false
-    },
-    {
-      "id": "olistica_signature_facial",
-      "name": "Olistica Signature Facial",
-      "pricing": {
-        "base": 1450
-      },
-      "best_seller": true
-    }
-  ]
-
+    "image": "assets/cat1.png",
+    "category": "Body Massages",
+    "description": "Relaxing full-body massage treatments designed to ease stress, relieve muscle tension, and improve overall circulation."
   },
   {
-  "image": "assets/categ4.png",
-  "category": "Brows & Lashes",
-  "description": "Enhance your natural beauty with our professional brow and lash treatments.",
-  "services": [
-    {
-      "id": "eyelash_perming",
-      "name": "Eyelash Perming",
-      "price": [
-        { "label": "Standard", "amount": 550 }
-      ]
-    },
-    {
-      "id": "eyelash_keralift",
-      "name": "Eyelash Keralift",
-      "price": [
-        { "label": "Standard", "amount": 850 }
-      ]
-    },
-    {
-      "id": "eyebrows_lamination",
-      "name": "Eyebrows Lamination",
-      "price": [
-        { "label": "Standard", "amount": 850 }
-      ]
-    },
-    {
-      "id": "eyebrows_tinting",
-      "name": "Eyebrows Tinting",
-      "price": [
-        { "label": "Standard", "amount": 550 }
-      ]
-    },
-    {
-      "id": "natural_eyelash",
-      "name": "Natural Eyelash",
-      "price": [
-        { "label": "Standard", "amount": 850 }
-      ]
-    },
-    {
-      "id": "classic_eyelash",
-      "name": "Classic Eyelash",
-      "price": [
-        { "label": "Standard", "amount": 1000 }
-      ]
-    },
-    {
-      "id": "classic_foxeye",
-      "name": "Classic Foxeye",
-      "price": [
-        { "label": "Standard", "amount": 1250 }
-      ]
-    },
-    {
-      "id": "classic_wispy",
-      "name": "Classic Wispy",
-      "price": [
-        { "label": "Standard", "amount": 1250 }
-      ]
-    },
-    {
-      "id": "eyebrows_extensions",
-      "name": "Eyebrows Extensions",
-      "price": [
-        { "label": "Standard", "amount": 1550 }
-      ]
-    },
-    {
-      "id": "l_curl_classic",
-      "name": "L Curl Classic",
-      "price": [
-        { "label": "Standard", "amount": 1500 }
-      ]
-    },
-    {
-      "id": "volume_lashes",
-      "name": "Volume Lashes",
-      "price": [
-        { "label": "Standard", "amount": 2350 }
-      ]
-    },
-    {
-      "id": "mega_volume",
-      "name": "Mega Volume",
-      "price": [
-        { "label": "Standard", "amount": 2799 }
-      ]
-    },
-    {
-      "id": "anime_lashes",
-      "name": "Anime Lashes",
-      "price": [
-        { "label": "Standard", "amount": 2500 }
-      ]
-    }
-  ]
-
+    "image": "assets/cat2.png",
+    "category": "Body Whitening",
+    "description": "Brightening body treatments that help even out skin tone, lighten dark areas, and reveal a natural glow."
   },
-
   {
-  "image": "assets/categ5.png",
-  "category": "Hair Removals",
-  "description": "Professional hair removal services using hot and cold waxing techniques for smooth, hair-free skin.",
-  "services": [
-    {
-      "type": "Hot Waxing",
-      "areas": [
-        { "area": "Arms", "women": 950, "men": 1150 },
-        { "area": "Back", "women": 1250, "men": 1450 },
-        { "area": "Bikini/Butt Cheek", "women": 950, "men": 1150 },
-        { "area": "Chest", "women": 850, "men": 1250 },
-        { "area": "Eyebrow", "women": 450, "men": 650 },
-        { "area": "Face", "women": 850, "men": 1150 },
-        { "area": "Full Legs", "women": 1850, "men": 2450 },
-        { "area": "Half Legs", "women": 1050, "men": 1450 },
-        { "area": "Tummy", "women": 850, "men": 1050 },
-        { "area": "Underarms", "women": 550, "men": 750 },
-        { "area": "Upper Lip", "women": 450, "men": 850 },
-        { "area": "Brazilian", "women": 1850, "men": 2050 }
-      ]
-    },
-    {
-      "type": "Cold Waxing",
-      "areas": [
-        { "area": "Arms", "women": 800, "men": 1000 },
-        { "area": "Back", "women": 1100, "men": 1300 },
-        { "area": "Bikini/Butt Cheek", "women": 800, "men": 1000 },
-        { "area": "Chest", "women": 700, "men": 1100 },
-        { "area": "Eyebrow", "women": 300, "men": 500 },
-        { "area": "Face", "women": 700, "men": 1000 },
-        { "area": "Full Legs", "women": 1700, "men": 2300 },
-        { "area": "Half Legs", "women": 900, "men": 1300 },
-        { "area": "Tummy", "women": 700, "men": 900 },
-        { "area": "Underarms", "women": 400, "men": 600 },
-        { "area": "Upper Lip", "women": 300, "men": 700 },
-        { "area": "Brazilian", "women": 1700, "men": 1900 }
-      ]
-    }
-  ]
-},
-
-  {
-    "image": "assets/categ6.png",
+    "image": "assets/cat3.png",
     "category": "Facial",
-    "description": "A facial is a noninvasive skin treatment that includes cleansing, moisturizing, exfoliating and other elements that are customized to your specific skin type and needs. "
+    "description": "Rejuvenating facial therapies that deeply cleanse, hydrate, and restore your skin’s youthful radiance."
   },
   {
-    "image": "assets/categ7.png",
-    "name": "Facial",
-    "description": "A facial is a noninvasive skin treatment that includes cleansing, moisturizing, exfoliating and other elements that are customized to your specific skin type and needs. "
+    "image": "assets/cat4.png",
+    "category": "Brows & Lashes",
+    "description": "Professional brow shaping and lash enhancements to highlight your eyes and refine your natural beauty."
   },
   {
-    "image": "assets/categ8.png",
-    "name": "Facial",
-    "description": "A facial is a noninvasive skin treatment that includes cleansing, moisturizing, exfoliating and other elements that are customized to your specific skin type and needs. "
+    "image": "assets/cat5.png",
+    "category": "Waxing",
+    "description": "Gentle and effective hot or cold waxing services for smooth, hair-free skin that lasts longer."
+  },
+  {
+    "image": "assets/cat6.png",
+    "category": "Manicure",
+    "description": "Luxurious nail care including shaping, cuticle treatment, and polish for healthy, beautiful hands."
+  },
+  {
+    "image": "assets/cat7.png",
+    "category": "Pedicure",
+    "description": "Soothing foot care treatments that exfoliate, nourish, and leave your nails perfectly polished."
+  },
+  {
+    "image": "assets/cat8.png",
+    "category": "Body Scrub",
+    "description": "Invigorating exfoliation treatments that remove dead skin cells, soften rough areas, and refresh your body."
   }
 ]

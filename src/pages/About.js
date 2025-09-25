@@ -117,7 +117,7 @@ function About() {
 
 <section style={{ position: 'relative' }}>  
 
-  <div className='services'>
+  <div className='services' style={{ backgroundColor: "#171915"}}>
 
   <div className='line' style={{height:' 15px', border:'none'}}></div>
 
