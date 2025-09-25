@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxwXIkfn6C-qUD2lkWzKfxkFDgoOZ4jkUbI-pE_guXw64OgkiVQjCJzvO5nQF9O6G_m/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwEtnaKMBgW3CbcpNgP1erofMBHjbjp4LYMATHVDmNchXPEBx5hsiSsetwbYCxqMAQ/exec";
 
   try {
     const response = await fetch(GOOGLE_SCRIPT_URL, {
